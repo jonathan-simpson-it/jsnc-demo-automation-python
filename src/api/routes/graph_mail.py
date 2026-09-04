@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 from src import graph_mail
 from src.compliance.summary import SummaryGenerator
-from src.email_composer import compose_draft
+from src.email_composer import REPLY_INTENTS, compose_draft, compose_reply
 
 router = APIRouter()
 
@@ -25,6 +25,15 @@ class DraftGenerateRequest(BaseModel):
     tone: str = "professional"
     instructions: str = ""
     to: list[str] = []
+
+
+class ReplyGenerateRequest(BaseModel):
+    sender_name: str = ""
+    sender_email: str = ""
+    subject: str = ""
+    body: str = ""
+    intent: str = "acknowledge"
+    instructions: str = ""
 
 
 @router.get("/status")
@@ -66,6 +75,31 @@ async def create_draft(req: DraftRequest) -> dict:
         )
     except Exception as exc:
         raise HTTPException(status_code=502, detail=f"Graph mail error: {exc}")
+
+
+@router.post("/reply/generate")
+async def generate_reply(req: ReplyGenerateRequest) -> dict:
+    """Generate an AI reply to an incoming email (template fallback)."""
+    if req.intent not in REPLY_INTENTS:
+        raise HTTPException(
+            status_code=400,
+            detail=f"intent must be one of {', '.join(REPLY_INTENTS)}",
+        )
+    try:
+        draft = compose_reply(
+            sender_name=req.sender_name,
+            sender_email=req.sender_email,
+            subject=req.subject,
+            body=req.body,
+            intent=req.intent,
+            instructions=req.instructions,
+        )
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"compose failed: {exc}")
+    return {
+        **draft,
+        "to": [req.sender_email] if req.sender_email else [],
+    }
 
 
 @router.post("/draft/generate")

@@ -12,6 +12,7 @@ import re
 
 TEMPLATE_KEYS = ("digest", "monthly", "client", "alert")
 TONES = ("professional", "friendly", "formal")
+REPLY_INTENTS = ("acknowledge", "clarify", "compliance", "custom")
 
 _TEMPLATE_INTRO = {
     "digest": "Weekly platform digest",
@@ -138,5 +139,150 @@ def compose_draft(
     return {
         "subject": _build_subject(summary, template_key),
         "body": body,
+        "generated_by": "template",
+    }
+
+
+# ---------------------------------------------------------------------------
+# Email replies (master-detail mail workspace)
+# ---------------------------------------------------------------------------
+
+_INTENT_HINTS = {
+    "acknowledge": (
+        "Confirm receipt and acknowledge the sender's message courteously, "
+        "without committing to specific next steps."
+    ),
+    "clarify": (
+        "Ask the sender focused, specific clarifying questions about their "
+        "message so the firm can act on it."
+    ),
+    "compliance": (
+        "Provide a compliance-focused response referencing relevant SFC "
+        "guidelines and regulatory expectations where they apply."
+    ),
+    "custom": "Follow the extra instructions exactly.",
+}
+
+
+_REPLY_PROMPT = """You draft a professional email reply for a private-markets firm.
+Original message:
+From: {sender}
+Subject: {subject}
+---
+{body}
+---
+Reply intent: {hint}
+Extra instructions: {instructions}
+Rules:
+- Output ONLY JSON: {{"subject": "...", "body": "..."}}
+- The subject should normally be "Re: {subject}".
+- body uses markdown-lite: "## " section titles, "**bold**", "- " bullets, no tables.
+- Keep it under 1200 characters, courteous and professional.
+- Never invent facts about the sender or the firm; stay grounded in the
+  original message."""
+
+
+def _reply_intro(intent: str) -> str:
+    return {
+        "acknowledge": (
+            "Thank you for your message regarding the subject below. This "
+            "email confirms that we have received it and are reviewing the "
+            "matter. We will revert with a fuller response shortly."
+        ),
+        "clarify": (
+            "Thank you for your message. Before we can action it, could you "
+            "kindly clarify the points below so we address the right items?"
+        ),
+        "compliance": (
+            "Thank you for your message. We have reviewed the points raised "
+            "against the relevant regulatory expectations, including applicable "
+            "SFC guidelines, and the summary below reflects our position."
+        ),
+        "custom": "Thank you for your message.",
+    }.get(intent, "Thank you for your message.")
+
+
+def _reply_body_template(
+    intent: str, subject: str, body: str, instructions: str
+) -> str:
+    lines = ["## Acknowledgment", "", _reply_intro(intent), ""]
+    if intent == "clarify":
+        lines += [
+            "## Clarifications requested",
+            "",
+            "- The specific action or decision you would like us to take.",
+            "- Any documents or data points we should review as part of this.",
+            "- The timeframe you are working to, if applicable.",
+        ]
+    elif intent == "compliance":
+        lines += [
+            "## Compliance summary",
+            "",
+            "- We are reviewing the message against applicable SFC guidelines "
+            "and internal compliance policies.",
+            "- Any regulated activity implicated will be handled in line with "
+            "the relevant conduct requirements.",
+            "- A follow-up will confirm the assessment once the review completes.",
+        ]
+    if instructions:
+        lines += ["", "## Focus", "", instructions]
+    lines += ["", "---", "Generated with the Jonathan Simpson & Co. AI mail workspace."]
+    return "\n".join(lines)
+
+
+def compose_reply(
+    sender_name: str = "",
+    sender_email: str = "",
+    subject: str = "",
+    body: str = "",
+    intent: str = "acknowledge",
+    instructions: str = "",
+    llm=None,
+) -> dict:
+    """Build a reply to an incoming email.
+
+    Returns {'subject','body','generated_by'}. With an LLM the model writes
+    the reply grounded in the original message; on any failure (or no LLM)
+    a deterministic per-intent template is used.
+    """
+    if intent not in REPLY_INTENTS:
+        intent = "acknowledge"
+    hint = _INTENT_HINTS.get(intent, _INTENT_HINTS["acknowledge"])
+    sender = f"{sender_name} <{sender_email}>" if sender_name else (sender_email or "unknown")
+    if llm is None:
+        try:
+            llm = _default_llm()
+        except Exception:
+            llm = None
+    if llm is not None:
+        try:
+            from langchain_core.messages import HumanMessage, SystemMessage
+
+            resp = llm.invoke([
+                SystemMessage(content="You format valid JSON only."),
+                HumanMessage(
+                    content=_REPLY_PROMPT.format(
+                        sender=sender,
+                        subject=subject or "(no subject)",
+                        body=(body or "(no message body provided)")[:2000],
+                        hint=hint,
+                        instructions=instructions or "(none)",
+                    )
+                ),
+            ])
+            text = str(getattr(resp, "content", resp))
+            m = re.search(r"\{.*\}", text, re.S)
+            if m:
+                parsed = json.loads(m.group(0))
+                subj = str(parsed.get("subject", "")).strip()
+                rep = str(parsed.get("body", "")).strip()
+                if subj and rep:
+                    return {"subject": subj, "body": rep, "generated_by": "ai"}
+        except Exception:
+            pass  # any AI failure -> deterministic template
+    reply_subject = f"Re: {subject}" if subject else "Re: your message"
+    return {
+        "subject": reply_subject,
+        "body": _reply_body_template(intent, subject, body, instructions),
         "generated_by": "template",
     }
