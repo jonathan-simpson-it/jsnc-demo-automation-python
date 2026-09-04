@@ -109,7 +109,11 @@ kill_tree() {
 free_port() {
     local port="$1"
     local pid tries=0
-    while pid=$(lsof -ti:"$port" 2>/dev/null); do
+    # Match only processes LISTENING on the port. Plain `lsof -ti:$port` also
+    # matches client-side connections (e.g. a browser tab that once visited
+    # localhost:$port and still holds CLOSE_WAIT sockets) and would kill the
+    # browser helper instead of the server.
+    while pid=$(lsof -nP -iTCP:"$port" -sTCP:LISTEN -t 2>/dev/null); do
         for p in $pid; do
             echo -e "${YELLOW}Port $port still in use — stopping leftover PID $p${NC}"
             kill_tree "$p"
@@ -240,7 +244,7 @@ cleanup() {
     done
     sleep 1
     # Mop up any orphaned children (uvicorn --reload worker, next-server)
-    for p in $(lsof -ti:"$API_PORT" -ti:"$FRONTEND_PORT" 2>/dev/null || true); do
+    for p in $(lsof -nP -iTCP:"$API_PORT" -sTCP:LISTEN -t 2>/dev/null; lsof -nP -iTCP:"$FRONTEND_PORT" -sTCP:LISTEN -t 2>/dev/null || true); do
         kill -TERM "$p" 2>/dev/null || true
     done
     rm -rf "$LOCK_DIR"
@@ -341,12 +345,12 @@ fi
 backend_up=false
 frontend_up=false
 for _ in $(seq 1 60); do
-    if [ "$backend_up" = false ] && lsof -ti:"$API_PORT" >/dev/null 2>&1; then
+    if [ "$backend_up" = false ] && lsof -nP -iTCP:"$API_PORT" -sTCP:LISTEN -t >/dev/null 2>&1; then
         backend_up=true
     fi
     if [ "$API_ONLY" = true ] || [ -z "$FE_DIR" ]; then
         frontend_up=true
-    elif [ "$frontend_up" = false ] && lsof -ti:"$FRONTEND_PORT" >/dev/null 2>&1; then
+    elif [ "$frontend_up" = false ] && lsof -nP -iTCP:"$FRONTEND_PORT" -sTCP:LISTEN -t >/dev/null 2>&1; then
         frontend_up=true
     fi
     if [ "$backend_up" = true ] && [ "$frontend_up" = true ]; then
