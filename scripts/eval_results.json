@@ -1,0 +1,5021 @@
+{
+  "meta": {
+    "timestamp": "2026-09-02T06:42:47.782300+00:00",
+    "questions": 180,
+    "passed": 170,
+    "pct": 94.44444444444444,
+    "run_ms": 643517,
+    "avg_ms_per_question": 3575,
+    "llm_node_calls": 395,
+    "node_usage": {
+      "classify": 180,
+      "search": 180,
+      "narrow": 180,
+      "answer": 180,
+      "verify": 18,
+      "wide_search": 17
+    }
+  },
+  "questions": [
+    {
+      "id": "cv_1",
+      "doc": "cv",
+      "query": "What is the candidate's full name?",
+      "expected": "Devano Jonathan",
+      "passed": true,
+      "actual": "Devano Jonathan\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 896
+        },
+        {
+          "node": "search",
+          "ms": 601
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1373
+        }
+      ],
+      "latency_ms": 2874
+    },
+    {
+      "id": "cv_2",
+      "doc": "cv",
+      "query": "What is the candidate's email address?",
+      "expected": "devanojo2@gmail.com",
+      "passed": true,
+      "actual": "devanojo2@gmail.com\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 810
+        },
+        {
+          "node": "search",
+          "ms": 468
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 978
+        }
+      ],
+      "latency_ms": 2260
+    },
+    {
+      "id": "cv_3",
+      "doc": "cv",
+      "query": "What is the candidate's phone number?",
+      "expected": "65049457",
+      "passed": true,
+      "actual": "(+852) 65049457\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 773
+        },
+        {
+          "node": "search",
+          "ms": 367
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1342
+        }
+      ],
+      "latency_ms": 2489
+    },
+    {
+      "id": "cv_4",
+      "doc": "cv",
+      "query": "What is the street address on the CV?",
+      "expected": "9 Lung Wah Street",
+      "passed": true,
+      "actual": "9 Lung Wah Street, Lap-Chee College 1111, Kennedy Town, Hong Kong\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 654
+        },
+        {
+          "node": "search",
+          "ms": 279
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1358
+        }
+      ],
+      "latency_ms": 2295
+    },
+    {
+      "id": "cv_5",
+      "doc": "cv",
+      "query": "Which university is the candidate attending?",
+      "expected": "University of Hong Kong",
+      "passed": true,
+      "actual": "The University of Hong Kong\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 1 cv-jonathandevano-hkma.pdf, page 1, line 3",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 404
+        },
+        {
+          "node": "search",
+          "ms": 162
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1381
+        }
+      ],
+      "latency_ms": 1949
+    },
+    {
+      "id": "cv_6",
+      "doc": "cv",
+      "query": "What degree is the candidate pursuing?",
+      "expected": "Bachelor of Engineering in Data Science and Engineering",
+      "passed": true,
+      "actual": "Bachelor of Engineering in Data Science and Engineering\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 4 cv-jonathandevano-hkma.pdf, page 1, line 4",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 410
+        },
+        {
+          "node": "search",
+          "ms": 161
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1082
+        }
+      ],
+      "latency_ms": 1656
+    },
+    {
+      "id": "cv_7",
+      "doc": "cv",
+      "query": "When did the candidate start at the University of Hong Kong?",
+      "expected": "Sep 2022",
+      "passed": true,
+      "actual": "Sep 2022\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 3",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 837
+        },
+        {
+          "node": "search",
+          "ms": 173
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1228
+        }
+      ],
+      "latency_ms": 2241
+    },
+    {
+      "id": "cv_8",
+      "doc": "cv",
+      "query": "What award did the candidate win in the Bloomberg trading challenge?",
+      "expected": "2nd Runner-up",
+      "passed": true,
+      "actual": "2nd Runner-up in Bloomberg\u2019s 2024 Global Trading Challenge (Asia) .\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 14; Source 2: cv-jonathandevano-hkma.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 383
+        },
+        {
+          "node": "search",
+          "ms": 191
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1564
+        }
+      ],
+      "latency_ms": 2141
+    },
+    {
+      "id": "cv_9",
+      "doc": "cv",
+      "query": "What is the candidate's current role at Archbridge Capital Partners?",
+      "expected": "AI Engineer",
+      "passed": true,
+      "actual": "AI Engineer (Part-time) \u2013 Asset Management & Private Equity\nFurther analysis needed\ncv-jonathandevano-hkma.pdf, page 1, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 700
+        },
+        {
+          "node": "search",
+          "ms": 175
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1625
+        },
+        {
+          "node": "verify",
+          "ms": 722
+        },
+        {
+          "node": "wide_search",
+          "ms": 4355
+        }
+      ],
+      "latency_ms": 7581
+    },
+    {
+      "id": "cv_10",
+      "doc": "cv",
+      "query": "By what percentage was manual processing time reduced by the AI agents at Archbridge?",
+      "expected": "60%",
+      "passed": true,
+      "actual": "Over 60%\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 1049
+        },
+        {
+          "node": "search",
+          "ms": 167
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1232
+        }
+      ],
+      "latency_ms": 2452
+    },
+    {
+      "id": "cv_11",
+      "doc": "cv",
+      "query": "Which company hosted the candidate's software placement internship?",
+      "expected": "Hitachi Rail",
+      "passed": true,
+      "actual": "Hitachi Rail Hong Kong SAR\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 24",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 970
+        },
+        {
+          "node": "search",
+          "ms": 165
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1363
+        }
+      ],
+      "latency_ms": 2499
+    },
+    {
+      "id": "cv_12",
+      "doc": "cv",
+      "query": "How many candidates were screened per cycle at Career Hackers?",
+      "expected": "3,000",
+      "passed": true,
+      "actual": "Over 3,000 candidates per cycle.\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 34",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 645
+        },
+        {
+          "node": "search",
+          "ms": 4310
+        },
+        {
+          "node": "narrow",
+          "ms": 576
+        },
+        {
+          "node": "answer",
+          "ms": 1057
+        }
+      ],
+      "latency_ms": 6592
+    },
+    {
+      "id": "cv_13",
+      "doc": "cv",
+      "query": "Which student association did the candidate co-found at HKU?",
+      "expected": "HKU Data Science Association",
+      "passed": true,
+      "actual": "HKU Data Science Association\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 45 cv-jonathandevano-hkma.pdf, page 1, line 45",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 394
+        },
+        {
+          "node": "search",
+          "ms": 209
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1145
+        }
+      ],
+      "latency_ms": 1752
+    },
+    {
+      "id": "cv_14",
+      "doc": "cv",
+      "query": "How many members does the HKU Data Science Association have?",
+      "expected": "50+",
+      "passed": true,
+      "actual": "50+ members\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 45 cv-jonathandevano-hkma.pdf, page 1, line 45",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 712
+        },
+        {
+          "node": "search",
+          "ms": 486
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1450
+        }
+      ],
+      "latency_ms": 2651
+    },
+    {
+      "id": "cv_15",
+      "doc": "cv",
+      "query": "What is the candidate's personal website?",
+      "expected": "devoob.site",
+      "passed": true,
+      "actual": "devoob.site\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 1 cv-jonathandevano-hkma.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 440
+        },
+        {
+          "node": "search",
+          "ms": 173
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1246
+        }
+      ],
+      "latency_ms": 1860
+    },
+    {
+      "id": "cv_16",
+      "doc": "cv",
+      "query": "When did the Archbridge AI Engineer role begin?",
+      "expected": "Apr 2026",
+      "passed": true,
+      "actual": "Apr 2026\nFurther analysis needed\ncv-jonathandevano-hkma.pdf, page 1, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 474
+        },
+        {
+          "node": "search",
+          "ms": 152
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1385
+        },
+        {
+          "node": "verify",
+          "ms": 818
+        },
+        {
+          "node": "wide_search",
+          "ms": 3933
+        }
+      ],
+      "latency_ms": 6765
+    },
+    {
+      "id": "cv_17",
+      "doc": "cv",
+      "query": "How many automation opportunities were identified through workflow audits?",
+      "expected": "10+",
+      "passed": true,
+      "actual": "10+ automation opportunities were identified through workflow audits.\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 773
+        },
+        {
+          "node": "search",
+          "ms": 302
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1634
+        }
+      ],
+      "latency_ms": 2711
+    },
+    {
+      "id": "cv_18",
+      "doc": "cv",
+      "query": "Which serving framework hosted the quantised VLMs at Hitachi?",
+      "expected": "vLLM",
+      "passed": true,
+      "actual": "vLLM\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 24 cv-jonathandevano-hkma.pdf, page 1, line 24",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 1057
+        },
+        {
+          "node": "search",
+          "ms": 153
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1341
+        }
+      ],
+      "latency_ms": 2553
+    },
+    {
+      "id": "cv_19",
+      "doc": "cv",
+      "query": "Which OCR library was integrated in the vision pipeline?",
+      "expected": "EasyOCR",
+      "passed": true,
+      "actual": "EasyOCR\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 24 cv-jonathandevano-hkma.pdf, page 1, line 24",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 495
+        },
+        {
+          "node": "search",
+          "ms": 159
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1380
+        }
+      ],
+      "latency_ms": 2037
+    },
+    {
+      "id": "cv_20",
+      "doc": "cv",
+      "query": "By how many hours was HR workload reduced per batch at Career Hackers?",
+      "expected": "100 hours",
+      "passed": true,
+      "actual": "approximately 100 hours per batch.\nFurther analysis needed\ncv-jonathandevano-hkma.pdf, page 1, line 34",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 724
+        },
+        {
+          "node": "search",
+          "ms": 317
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2791
+        },
+        {
+          "node": "verify",
+          "ms": 1638
+        },
+        {
+          "node": "wide_search",
+          "ms": 3655
+        }
+      ],
+      "latency_ms": 9129
+    },
+    {
+      "id": "cv_21",
+      "doc": "cv",
+      "query": "By what percentage was detection accuracy improved by fine-tuning?",
+      "expected": "30%",
+      "passed": true,
+      "actual": "30%\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 34",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 837
+        },
+        {
+          "node": "search",
+          "ms": 232
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1218
+        }
+      ],
+      "latency_ms": 2290
+    },
+    {
+      "id": "cv_22",
+      "doc": "cv",
+      "query": "Which sentence embedding model was fine-tuned?",
+      "expected": "Sentence-BERT|SBERT",
+      "passed": true,
+      "actual": "Sentence-BERT (SBERT)\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 34 cv-jonathandevano-hkma.pdf, page 1, line 34",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 516
+        },
+        {
+          "node": "search",
+          "ms": 166
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1400
+        }
+      ],
+      "latency_ms": 2084
+    },
+    {
+      "id": "cv_23",
+      "doc": "cv",
+      "query": "What was the cheating detection system built on?",
+      "expected": "speech-to-text",
+      "passed": true,
+      "actual": "The cheating detection system was built using speech-to-text analysis for online interviews.\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 34 cv-jonathandevano-hkma.pdf, page 1, line 34",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 514
+        },
+        {
+          "node": "search",
+          "ms": 7083
+        },
+        {
+          "node": "narrow",
+          "ms": 877
+        },
+        {
+          "node": "answer",
+          "ms": 1314
+        }
+      ],
+      "latency_ms": 9793
+    },
+    {
+      "id": "cv_24",
+      "doc": "cv",
+      "query": "Which statistics topic is listed in the relevant coursework?",
+      "expected": "Linear Statistical Analysis|Probability & Statistics",
+      "passed": true,
+      "actual": "Linear Statistical Analysis\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 14 cv-jonathandevano-hkma.pdf, page 1, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 580
+        },
+        {
+          "node": "search",
+          "ms": 320
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1292
+        }
+      ],
+      "latency_ms": 2198
+    },
+    {
+      "id": "cv_25",
+      "doc": "cv",
+      "query": "Which global trading challenge is mentioned under honors?",
+      "expected": "Bloomberg's 2024 Global Trading Challenge",
+      "passed": true,
+      "actual": "Bloomberg\u2019s 2024 Global Trading Challenge (Asia)\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 14; Source 2: cv-jonathandevano-hkma.pdf, page 1, line 1 cv-jonathandevano-hkma.pdf, page 1, line 14 cv-jonathandevano-hkma.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 475
+        },
+        {
+          "node": "search",
+          "ms": 899
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1762
+        }
+      ],
+      "latency_ms": 3143
+    },
+    {
+      "id": "cv_26",
+      "doc": "cv",
+      "query": "What scholarship was awarded via the Informatics Olympiad National Finals?",
+      "expected": "Indonesia Maju Scholar",
+      "passed": true,
+      "actual": "Indonesia Maju Scholar\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 14 cv-jonathandevano-hkma.pdf, page 1, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 601
+        },
+        {
+          "node": "search",
+          "ms": 513
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1659
+        }
+      ],
+      "latency_ms": 2782
+    },
+    {
+      "id": "cv_27",
+      "doc": "cv",
+      "query": "Which relational database is listed under technical skills?",
+      "expected": "SQL|MySQL",
+      "passed": true,
+      "actual": "SQL, MySQL\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 45",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 845
+        },
+        {
+          "node": "search",
+          "ms": 230
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1319
+        }
+      ],
+      "latency_ms": 2397
+    },
+    {
+      "id": "cv_28",
+      "doc": "cv",
+      "query": "What was reduced by automating VM provisioning at Hitachi?",
+      "expected": "testing lifecycle duration",
+      "passed": true,
+      "actual": "The testing lifecycle duration was reduced by automating VM provisioning via Python scripts, creating a scalable CI/CD environment for multi-server parallel testing.\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 34 cv-jonathandevano-hkma.pdf, page 1, line 34",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 398
+        },
+        {
+          "node": "search",
+          "ms": 190
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1211
+        }
+      ],
+      "latency_ms": 1802
+    },
+    {
+      "id": "cv_29",
+      "doc": "cv",
+      "query": "Which BI visualization tool is listed in the skills section?",
+      "expected": "Tableau|Google Looker Studio",
+      "passed": true,
+      "actual": "Tableau, Google Looker Studio, Matplotlib, Excel (VLOOKUP, PivotTables, Macros/VBA)\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 45 cv-jonathandevano-hkma.pdf, page 1, line 45",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 654
+        },
+        {
+          "node": "search",
+          "ms": 308
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1328
+        }
+      ],
+      "latency_ms": 2293
+    },
+    {
+      "id": "cv_30",
+      "doc": "cv",
+      "query": "What type of agents does the candidate build that navigate professional tools?",
+      "expected": "autonomous agents",
+      "passed": true,
+      "actual": "The candidate builds autonomous agents capable of navigating complex professional tools with human-level reasoning.\nInsufficient data to recommend.\ncv-jonathandevano-hkma.pdf, page 1, line 1 cv-jonathandevano-hkma.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 980
+        },
+        {
+          "node": "search",
+          "ms": 149
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1684
+        }
+      ],
+      "latency_ms": 2816
+    },
+    {
+      "id": "dr_yip_1",
+      "doc": "dr_yip",
+      "query": "Who is the digital transformation proposal prepared for?",
+      "expected": "Dr. Yip, Tze Hung|Dr. Yip",
+      "passed": true,
+      "actual": "Dr. Yip, Tze Hung, Specialist Medical Practice & Aesthetic Clinic, Hong Kong\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 626
+        },
+        {
+          "node": "search",
+          "ms": 165
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1474
+        }
+      ],
+      "latency_ms": 2267
+    },
+    {
+      "id": "dr_yip_2",
+      "doc": "dr_yip",
+      "query": "Who prepared the proposal?",
+      "expected": "Devano Jonathan",
+      "passed": true,
+      "actual": "Devano Jonathan, Co-Founder, Jonathan Simpson & Co.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 558
+        },
+        {
+          "node": "search",
+          "ms": 147
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1334
+        }
+      ],
+      "latency_ms": 2041
+    },
+    {
+      "id": "dr_yip_3",
+      "doc": "dr_yip",
+      "query": "Which venture studio prepared the proposal?",
+      "expected": "Jonathan Simpson & Co.",
+      "passed": true,
+      "actual": "Jonathan Simpson & Co.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 745
+        },
+        {
+          "node": "search",
+          "ms": 155
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1477
+        }
+      ],
+      "latency_ms": 2380
+    },
+    {
+      "id": "dr_yip_4",
+      "doc": "dr_yip",
+      "query": "What is the contact email in the proposal?",
+      "expected": "devano@jonathansimpson.co",
+      "passed": true,
+      "actual": "devano@jonathansimpson.co\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 2765
+        },
+        {
+          "node": "search",
+          "ms": 292
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1198
+        }
+      ],
+      "latency_ms": 4257
+    },
+    {
+      "id": "dr_yip_5",
+      "doc": "dr_yip",
+      "query": "How long is the phased rollout timeline?",
+      "expected": "3-month|3 months",
+      "passed": true,
+      "actual": "The phased rollout timeline is 3 months.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 4, line 13 dr_yip_draft.pdf, page 2, line 21 dr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 4, line 13 dr_yip_draft.pdf, page 2, line 21 dr_yip_draft.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 655
+        },
+        {
+          "node": "search",
+          "ms": 158
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1677
+        }
+      ],
+      "latency_ms": 2492
+    },
+    {
+      "id": "dr_yip_6",
+      "doc": "dr_yip",
+      "query": "What do traditional digital agencies focus on exclusively?",
+      "expected": "surface-level aesthetic changes",
+      "passed": true,
+      "actual": "Traditional digital agencies focus exclusively on surface-level aesthetic changes on public web pages.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 1, line 18 dr_yip_draft.pdf, page 1, line 18",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 457
+        },
+        {
+          "node": "search",
+          "ms": 153
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1621
+        }
+      ],
+      "latency_ms": 2233
+    },
+    {
+      "id": "dr_yip_7",
+      "doc": "dr_yip",
+      "query": "What is the name of Pillar 1?",
+      "expected": "Premium Digital Infrastructure & Advanced Omnichannel Visibility|Premium Digital Infrastructure",
+      "passed": true,
+      "actual": "Pillar 1: Premium Digital Infrastructure & Advanced Omnichannel Visibility\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 2, line 21 dr_yip_draft.pdf, page 2, line 21",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 516
+        },
+        {
+          "node": "search",
+          "ms": 315
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1488
+        }
+      ],
+      "latency_ms": 2321
+    },
+    {
+      "id": "dr_yip_8",
+      "doc": "dr_yip",
+      "query": "What is the name of Pillar 2?",
+      "expected": "High-Compliance Automated Patient Operations",
+      "passed": true,
+      "actual": "Pillar 2: High-Compliance Automated Patient Operations\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 3, line 15 dr_yip_draft.pdf, page 3, line 15",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 681
+        },
+        {
+          "node": "search",
+          "ms": 315
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1127
+        }
+      ],
+      "latency_ms": 2125
+    },
+    {
+      "id": "dr_yip_9",
+      "doc": "dr_yip",
+      "query": "What is the name of Pillar 3?",
+      "expected": "Clinical Intelligence & Advanced Operational Analytics",
+      "passed": true,
+      "actual": "Pillar 3: Clinical Intelligence & Advanced Operational Analytics\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 3, line 25 dr_yip_draft.pdf, page 3, line 25",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 820
+        },
+        {
+          "node": "search",
+          "ms": 304
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1339
+        }
+      ],
+      "latency_ms": 2466
+    },
+    {
+      "id": "dr_yip_10",
+      "doc": "dr_yip",
+      "query": "Which encryption standard is used for PII at rest?",
+      "expected": "AES-256",
+      "passed": true,
+      "actual": "AES-256 standards\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 4, line 1 dr_yip_draft.pdf, page 4, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 785
+        },
+        {
+          "node": "search",
+          "ms": 287
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1873
+        }
+      ],
+      "latency_ms": 2947
+    },
+    {
+      "id": "dr_yip_11",
+      "doc": "dr_yip",
+      "query": "Which Hong Kong privacy ordinance does the proposal align with?",
+      "expected": "Personal Data (Privacy) Ordinance|PDPO",
+      "passed": false,
+      "actual": "\n\ndr_yip_draft.pdf, page 4, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 651
+        },
+        {
+          "node": "search",
+          "ms": 158
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2095
+        },
+        {
+          "node": "verify",
+          "ms": 1019
+        },
+        {
+          "node": "wide_search",
+          "ms": 4425
+        }
+      ],
+      "latency_ms": 8353
+    },
+    {
+      "id": "dr_yip_12",
+      "doc": "dr_yip",
+      "query": "What does the Phase 0 engagement consist of?",
+      "expected": "1-Day Clinical Workflow & Data Audit|Clinical Workflow & Data Audit",
+      "passed": true,
+      "actual": "Based on the retrieved documents, the Phase 0 engagement consists of a 1-Day Clinical Workflow & Data Audit. This involves Jonathan Simpson & Co. spending a single afternoon silently auditing current administrative bottlenecks, manual intake paths, and a de-identified sample of past records to evaluate data .\nFurther analysis needed\ndr_yip_draft.pdf, page 5, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 490
+        },
+        {
+          "node": "search",
+          "ms": 2570
+        },
+        {
+          "node": "narrow",
+          "ms": 607
+        },
+        {
+          "node": "answer",
+          "ms": 2061
+        },
+        {
+          "node": "verify",
+          "ms": 1473
+        },
+        {
+          "node": "wide_search",
+          "ms": 3771
+        }
+      ],
+      "latency_ms": 10977
+    },
+    {
+      "id": "dr_yip_13",
+      "doc": "dr_yip",
+      "query": "How many days of hyper-care technical support are provided after deployment?",
+      "expected": "30 days",
+      "passed": true,
+      "actual": "30 days\nFurther analysis needed\ndr_yip_draft.pdf, page 5, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 491
+        },
+        {
+          "node": "search",
+          "ms": 292
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2489
+        },
+        {
+          "node": "verify",
+          "ms": 1209
+        },
+        {
+          "node": "wide_search",
+          "ms": 4036
+        }
+      ],
+      "latency_ms": 8520
+    },
+    {
+      "id": "dr_yip_14",
+      "doc": "dr_yip",
+      "query": "What type of practice is Dr. Yip's clinic?",
+      "expected": "Specialist Medical Practice & Aesthetic Clinic|aesthetic clinic",
+      "passed": true,
+      "actual": "Dr. Yip's clinic is a \"Specialist Medical Practice & Aesthetic Clinic\" in Hong Kong, focused on \"Premium Aesthetic Medicine\" .\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 535
+        },
+        {
+          "node": "search",
+          "ms": 283
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1933
+        }
+      ],
+      "latency_ms": 2753
+    },
+    {
+      "id": "dr_yip_15",
+      "doc": "dr_yip",
+      "query": "What two search channels form the Discovery Blindspot?",
+      "expected": "Traditional & Generative Search|traditional search",
+      "passed": true,
+      "actual": "The Discovery Blindspot consists of traditional search engines and next-generation search assistants (generative search).\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 2, line 1; Source 6: dr_yip_draft.pdf, page 2, line 11 dr_yip_draft.pdf, page 2, line 1 dr_yip_draft.pdf, page 2, line 11",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 443
+        },
+        {
+          "node": "search",
+          "ms": 155
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2217
+        }
+      ],
+      "latency_ms": 2817
+    },
+    {
+      "id": "dr_yip_16",
+      "doc": "dr_yip",
+      "query": "What is the name of the operational leak involving the 'uncompleted course'?",
+      "expected": "Multi-Session Package Churn",
+      "passed": false,
+      "actual": "\"uncompleted course\"\nFurther analysis needed\ndr_yip_draft.pdf, page 2, line 11",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 532
+        },
+        {
+          "node": "search",
+          "ms": 295
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 3402
+        },
+        {
+          "node": "verify",
+          "ms": 1008
+        },
+        {
+          "node": "wide_search",
+          "ms": 3431
+        }
+      ],
+      "latency_ms": 8672
+    },
+    {
+      "id": "dr_yip_17",
+      "doc": "dr_yip",
+      "query": "What type of assets suffer from idle time when booking is unoptimized?",
+      "expected": "clinical machinery|treatment rooms|high-value assets",
+      "passed": true,
+      "actual": "Based on the retrieved documents, the assets that suffer from idle time when booking is unoptimized are **specialized clinical machinery and treatment rooms**. These are described as major capital investments that sit under-utilized during peak bottleneck hours when booking patterns are unoptimized.\nFurther analysis needed\ndr_yip_draft.pdf, page 2, line 11",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 417
+        },
+        {
+          "node": "search",
+          "ms": 155
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1889
+        },
+        {
+          "node": "verify",
+          "ms": 1639
+        },
+        {
+          "node": "wide_search",
+          "ms": 4223
+        }
+      ],
+      "latency_ms": 8327
+    },
+    {
+      "id": "dr_yip_18",
+      "doc": "dr_yip",
+      "query": "Which month focuses on Automated Booking & Discovery Optimization?",
+      "expected": "Month 2",
+      "passed": true,
+      "actual": "Month 2 focuses on Automated Booking & Discovery Optimization.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 4, line 13 dr_yip_draft.pdf, page 4, line 13",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 554
+        },
+        {
+          "node": "search",
+          "ms": 153
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2111
+        }
+      ],
+      "latency_ms": 2821
+    },
+    {
+      "id": "dr_yip_19",
+      "doc": "dr_yip",
+      "query": "What does Month 3 deliver for the clinic?",
+      "expected": "de-identified data pipelines|intelligence & data optimization",
+      "passed": true,
+      "actual": "Month 3 delivers \"Intelligence & Data Optimization\" with key deliverables including \"De-identified data pipelines, operational capacity dashboards, treatment package retention tracking modules, security stress-testing, and SEO performance auditing.\"\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 4, line 13 dr_yip_draft.pdf, page 5, line 14 dr_yip_draft.pdf, page 4, line 13 dr_yip_draft.pdf, page 5, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 819
+        },
+        {
+          "node": "search",
+          "ms": 289
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2166
+        }
+      ],
+      "latency_ms": 3277
+    },
+    {
+      "id": "dr_yip_20",
+      "doc": "dr_yip",
+      "query": "What does the Intelligent Appointment Engine allow patients to do?",
+      "expected": "view real-time availability|request slots",
+      "passed": true,
+      "actual": "The Intelligent Appointment Engine allows patients to view real-time availability and request slots based on custom clinical rules (e.g., distinguishing an initial consultation from a long-duration specialized procedure).\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 3, line 15 dr_yip_draft.pdf, page 3, line 15",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 681
+        },
+        {
+          "node": "search",
+          "ms": 2431
+        },
+        {
+          "node": "narrow",
+          "ms": 1149
+        },
+        {
+          "node": "answer",
+          "ms": 1144
+        }
+      ],
+      "latency_ms": 5407
+    },
+    {
+      "id": "dr_yip_21",
+      "doc": "dr_yip",
+      "query": "Which two channels do the automated alerts use?",
+      "expected": "SMS and email",
+      "passed": true,
+      "actual": "SMS and email\nFurther analysis needed\ndr_yip_draft.pdf, page 3, line 15",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 817
+        },
+        {
+          "node": "search",
+          "ms": 154
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1817
+        },
+        {
+          "node": "verify",
+          "ms": 1304
+        },
+        {
+          "node": "wide_search",
+          "ms": 4752
+        }
+      ],
+      "latency_ms": 8847
+    },
+    {
+      "id": "dr_yip_22",
+      "doc": "dr_yip",
+      "query": "What does calendar synchronization completely eliminate?",
+      "expected": "administrative double-bookings",
+      "passed": true,
+      "actual": "Calendar synchronization completely eliminates administrative double-bookings.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 3, line 25; Source 2: dr_yip_draft.pdf, page 3, line 15 dr_yip_draft.pdf, page 3, line 25; Source 2: dr_yip_draft.pdf, page 3, line 15",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 817
+        },
+        {
+          "node": "search",
+          "ms": 154
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1281
+        }
+      ],
+      "latency_ms": 2255
+    },
+    {
+      "id": "dr_yip_23",
+      "doc": "dr_yip",
+      "query": "What does Patient Retention Analytics automatically track?",
+      "expected": "multi-session treatment cycles",
+      "passed": true,
+      "actual": "Patient Retention Analytics automatically tracks multi-session treatment cycles, flagging patient records when a critical treatment window is missed to support long-term care management.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 3, line 25 dr_yip_draft.pdf, page 3, line 25",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 719
+        },
+        {
+          "node": "search",
+          "ms": 154
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1231
+        }
+      ],
+      "latency_ms": 2106
+    },
+    {
+      "id": "dr_yip_24",
+      "doc": "dr_yip",
+      "query": "What does No-Show Risk Modeling help optimize?",
+      "expected": "waitlists",
+      "passed": true,
+      "actual": "Based on the retrieved documents, No-Show Risk Modeling helps optimize waitlists and systematically protect clinical hours .\nFurther analysis needed\ndr_yip_draft.pdf, page 4, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 553
+        },
+        {
+          "node": "search",
+          "ms": 149
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2141
+        },
+        {
+          "node": "verify",
+          "ms": 820
+        },
+        {
+          "node": "wide_search",
+          "ms": 3442
+        }
+      ],
+      "latency_ms": 7108
+    },
+    {
+      "id": "dr_yip_25",
+      "doc": "dr_yip",
+      "query": "What type of data do the operational dashboards run on?",
+      "expected": "de-identified data|de-identified|anonymized|clean operational logs",
+      "passed": true,
+      "actual": "The operational dashboards and retention trend models run entirely on de-identified data structures.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 4, line 1 dr_yip_draft.pdf, page 4, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 489
+        },
+        {
+          "node": "search",
+          "ms": 152
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1320
+        }
+      ],
+      "latency_ms": 1963
+    },
+    {
+      "id": "dr_yip_26",
+      "doc": "dr_yip",
+      "query": "What guarantee does the Phase 0 audit carry?",
+      "expected": "zero-disruption",
+      "passed": true,
+      "actual": "The Phase 0 Clinical Audit carries a \"zero-disruption guarantee for active clinical hours.\"\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 5, line 14 dr_yip_draft.pdf, page 5, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 817
+        },
+        {
+          "node": "search",
+          "ms": 2511
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1366
+        }
+      ],
+      "latency_ms": 4697
+    },
+    {
+      "id": "dr_yip_27",
+      "doc": "dr_yip",
+      "query": "What is the final deliverable following the audit?",
+      "expected": "Clinical Intelligence Blueprint",
+      "passed": true,
+      "actual": "The final asset following the audit is a comprehensive Clinical Intelligence Blueprint detailing integration feasibility map, asset utilization diagnostic, and fixed-scope development breakdown.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 5, line 31 dr_yip_draft.pdf, page 5, line 31",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 544
+        },
+        {
+          "node": "search",
+          "ms": 157
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1643
+        }
+      ],
+      "latency_ms": 2347
+    },
+    {
+      "id": "dr_yip_28",
+      "doc": "dr_yip",
+      "query": "Where is Dr. Yip's practice located?",
+      "expected": "Hong Kong",
+      "passed": true,
+      "actual": "The practice is located in Hong Kong.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 764
+        },
+        {
+          "node": "search",
+          "ms": 160
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1696
+        }
+      ],
+      "latency_ms": 2622
+    },
+    {
+      "id": "dr_yip_29",
+      "doc": "dr_yip",
+      "query": "What compliance standard does the Medical Council requirement ensure?",
+      "expected": "Medical Council of Hong Kong's Guidelines|Medical Council of Hong Kong",
+      "passed": true,
+      "actual": "The Medical Council of Hong Kong\u2019s Guidelines ensure that all public information, SEO meta-structures, and copy are entirely factual, professional, and non-promotional.\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 3, line 5 dr_yip_draft.pdf, page 3, line 15",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 874
+        },
+        {
+          "node": "search",
+          "ms": 157
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2115
+        }
+      ],
+      "latency_ms": 3148
+    },
+    {
+      "id": "dr_yip_30",
+      "doc": "dr_yip",
+      "query": "What is the core inventory of a specialized aesthetic practice according to the proposal?",
+      "expected": "clinical time",
+      "passed": true,
+      "actual": "The core inventory of a specialized aesthetic practice is \"clinical time, brand reputation, and asset utilization.\"\nInsufficient data to recommend.\ndr_yip_draft.pdf, page 1, line 1 dr_yip_draft.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 621
+        },
+        {
+          "node": "search",
+          "ms": 172
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1548
+        }
+      ],
+      "latency_ms": 2343
+    },
+    {
+      "id": "enosis_1",
+      "doc": "enosis",
+      "query": "What is the name of the venture in the pitch deck?",
+      "expected": "Enosis",
+      "passed": true,
+      "actual": "Enosis (The Universal Data Translation Layer)\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 1, line 1 polyu-ifc-enosis.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 572
+        },
+        {
+          "node": "search",
+          "ms": 289
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1512
+        }
+      ],
+      "latency_ms": 2375
+    },
+    {
+      "id": "enosis_2",
+      "doc": "enosis",
+      "query": "Which competition track is Enosis submitted to?",
+      "expected": "Life Sciences & Healthcare",
+      "passed": true,
+      "actual": "Life Sciences & Healthcare (Horizontal scalability to Fintech & Advanced Manufacturing)\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 1, line 11; Source 3: polyu-ifc-enosis.pdf, page 1, line 1 polyu-ifc-enosis.pdf, page 1, line 11 polyu-ifc-enosis.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 438
+        },
+        {
+          "node": "search",
+          "ms": 145
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1706
+        }
+      ],
+      "latency_ms": 2291
+    },
+    {
+      "id": "enosis_3",
+      "doc": "enosis",
+      "query": "Quote the Enosis mantra verbatim.",
+      "expected": "We don't build the AI|we enable it|We don't build the AI\u2014we enable it|We don't build the AI - we enable it",
+      "passed": true,
+      "actual": "\"We don't build the AI\u2014we enable it. We turn trapped, unstructured data into machine-readable standards with zero added work.\"\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 1, line 11 polyu-ifc-enosis.pdf, page 1, line 11",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 656
+        },
+        {
+          "node": "search",
+          "ms": 153
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1483
+        }
+      ],
+      "latency_ms": 2294
+    },
+    {
+      "id": "enosis_4",
+      "doc": "enosis",
+      "query": "By what percentage is clinical friction reduced?",
+      "expected": "98%",
+      "passed": true,
+      "actual": "Clinical friction is reduced by 98% .\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 1, line 11 polyu-ifc-enosis.pdf, page 1, line 11",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 590
+        },
+        {
+          "node": "search",
+          "ms": 151
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1385
+        }
+      ],
+      "latency_ms": 2128
+    },
+    {
+      "id": "enosis_5",
+      "doc": "enosis",
+      "query": "What is the hard deadline for the eHealth+ Connectivity Support Scheme?",
+      "expected": "March 31, 2026|31 March 2026",
+      "passed": true,
+      "actual": "March 31, 2026\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 1, line 22",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 822
+        },
+        {
+          "node": "search",
+          "ms": 4426
+        },
+        {
+          "node": "narrow",
+          "ms": 587
+        },
+        {
+          "node": "answer",
+          "ms": 1047
+        }
+      ],
+      "latency_ms": 6885
+    },
+    {
+      "id": "enosis_6",
+      "doc": "enosis",
+      "query": "How much is the monthly government subsidy per doctor?",
+      "expected": "HK$500|500",
+      "passed": true,
+      "actual": "HK$500 per doctor monthly\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 12, line 23; Source 4: polyu-ifc-enosis.pdf, page 2, line 10 polyu-ifc-enosis.pdf, page 12, line 23 polyu-ifc-enosis.pdf, page 2, line 10",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 699
+        },
+        {
+          "node": "search",
+          "ms": 3771
+        },
+        {
+          "node": "narrow",
+          "ms": 823
+        },
+        {
+          "node": "answer",
+          "ms": 1421
+        }
+      ],
+      "latency_ms": 6717
+    },
+    {
+      "id": "enosis_7",
+      "doc": "enosis",
+      "query": "How many outpatient visits do private Western clinics handle annually?",
+      "expected": "18 million|18 Million",
+      "passed": true,
+      "actual": "Private Western clinics handle 18 million outpatient visits annually in Hong Kong.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 2, line 10; Source 3: polyu-ifc-enosis.pdf, page 11, line 22; Source 5: polyu-ifc-enosis.pdf, page 11, line 13; Source 9: polyu-ifc-enosis.pdf, page 2, line 22 polyu-ifc-enosis.pdf, page 2, line 10 polyu-ifc-enosis.pdf, page 11, line 22 polyu-ifc-enosis.pdf, page 11, line 13 polyu-ifc-enosis.pdf, page 2, line 22",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 816
+        },
+        {
+          "node": "search",
+          "ms": 295
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2102
+        }
+      ],
+      "latency_ms": 3215
+    },
+    {
+      "id": "enosis_8",
+      "doc": "enosis",
+      "query": "What is the total addressable market for GBA digital health IT?",
+      "expected": "HK$45.0 Billion|HK$45 Billion|45 billion",
+      "passed": true,
+      "actual": "The total addressable market for GBA digital health IT is HK$45.0 Billion, representing the total addressable market of GBA digital medical networking and cross-border IT data infrastructure .\nFurther analysis needed\npolyu-ifc-enosis.pdf, page 5, line 25",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 880
+        },
+        {
+          "node": "search",
+          "ms": 150
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2321
+        },
+        {
+          "node": "verify",
+          "ms": 1369
+        },
+        {
+          "node": "wide_search",
+          "ms": 4182
+        }
+      ],
+      "latency_ms": 8906
+    },
+    {
+      "id": "enosis_9",
+      "doc": "enosis",
+      "query": "What is the SAM for EMR translation and SaaS?",
+      "expected": "HK$5.5 Billion|5.5 billion",
+      "passed": true,
+      "actual": "HK$5.5 Billion (the addressable translation, schema-mapping, and clinical software solutions market within HK and Tier-1 GBA clinics).\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 5, line 25 polyu-ifc-enosis.pdf, page 5, line 25",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 584
+        },
+        {
+          "node": "search",
+          "ms": 153
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1896
+        }
+      ],
+      "latency_ms": 2634
+    },
+    {
+      "id": "enosis_10",
+      "doc": "enosis",
+      "query": "What is the Year 3 SOM target?",
+      "expected": "HK$36.0 Million|HK$36 Million|36 million",
+      "passed": true,
+      "actual": "HK$36.0 Million (Year 3 SOM Target)\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 5, line 25 polyu-ifc-enosis.pdf, page 5, line 25",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 972
+        },
+        {
+          "node": "search",
+          "ms": 150
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1483
+        }
+      ],
+      "latency_ms": 2607
+    },
+    {
+      "id": "enosis_11",
+      "doc": "enosis",
+      "query": "What is the monthly price of the Core Translation package?",
+      "expected": "HK$1,500|1500",
+      "passed": true,
+      "actual": "HK$1,500 per month\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 6, line 11 polyu-ifc-enosis.pdf, page 6, line 11",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 983
+        },
+        {
+          "node": "search",
+          "ms": 288
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1634
+        }
+      ],
+      "latency_ms": 2907
+    },
+    {
+      "id": "enosis_12",
+      "doc": "enosis",
+      "query": "What is the monthly price of the Bento add-on?",
+      "expected": "HK$500|500",
+      "passed": true,
+      "actual": "HK$500 per month premium add-on.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 6, line 11 polyu-ifc-enosis.pdf, page 6, line 11",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 745
+        },
+        {
+          "node": "search",
+          "ms": 296
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1498
+        }
+      ],
+      "latency_ms": 2542
+    },
+    {
+      "id": "enosis_13",
+      "doc": "enosis",
+      "query": "What is the target average contract value per month?",
+      "expected": "HK$2,000|2000",
+      "passed": true,
+      "actual": "HK$2,000 per month (HK$24,000 annually) once clinics upgrade to the full Bento suite.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 6, line 24 polyu-ifc-enosis.pdf, page 6, line 24 polyu-ifc-enosis.pdf, page 6, line 24",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 449
+        },
+        {
+          "node": "search",
+          "ms": 162
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1848
+        }
+      ],
+      "latency_ms": 2461
+    },
+    {
+      "id": "enosis_14",
+      "doc": "enosis",
+      "query": "What seed round is Enosis seeking?",
+      "expected": "HK$10 million|HK$10,000,000|10 million",
+      "passed": true,
+      "actual": "Enosis is seeking a seed round of HK 10 million (HK$10,000,000).\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 14, line 4 polyu-ifc-enosis.pdf, page 10, line 25 polyu-ifc-enosis.pdf, page 14, line 4 polyu-ifc-enosis.pdf, page 10, line 25",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 938
+        },
+        {
+          "node": "search",
+          "ms": 156
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1810
+        }
+      ],
+      "latency_ms": 2906
+    },
+    {
+      "id": "enosis_15",
+      "doc": "enosis",
+      "query": "Which in-process vector database does Enosis integrate?",
+      "expected": "ZVec",
+      "passed": true,
+      "actual": "Enosis integrates Alibaba's brand-new, open-source, in-process vector database, ZVec.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 12, line 5 polyu-ifc-enosis.pdf, page 4, line 2 polyu-ifc-enosis.pdf, page 12, line 5 polyu-ifc-enosis.pdf, page 4, line 2",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 816
+        },
+        {
+          "node": "search",
+          "ms": 156
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1542
+        }
+      ],
+      "latency_ms": 2516
+    },
+    {
+      "id": "enosis_16",
+      "doc": "enosis",
+      "query": "When was the Electronic Health Record Sharing System (Amendment) Ordinance gazetted?",
+      "expected": "December 1, 2025|1 December 2025",
+      "passed": true,
+      "actual": "December 1, 2025\nFurther analysis needed\npolyu-ifc-enosis.pdf, page 11, line 13 polyu-ifc-enosis.pdf, page 1, line 22",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 434
+        },
+        {
+          "node": "search",
+          "ms": 155
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2136
+        },
+        {
+          "node": "verify",
+          "ms": 817
+        },
+        {
+          "node": "wide_search",
+          "ms": 3579
+        }
+      ],
+      "latency_ms": 7124
+    },
+    {
+      "id": "enosis_17",
+      "doc": "enosis",
+      "query": "What is the name of the government scheme that subsidizes clinics?",
+      "expected": "eHealth+ Connectivity Support Scheme",
+      "passed": true,
+      "actual": "The government scheme is called the \"eHealth+ Connectivity Support Scheme\" .\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 1, line 22; Source 5: polyu-ifc-enosis.pdf, page 12, line 14 polyu-ifc-enosis.pdf, page 12, line 14 polyu-ifc-enosis.pdf, page 1, line 22",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 515
+        },
+        {
+          "node": "search",
+          "ms": 285
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2336
+        }
+      ],
+      "latency_ms": 3138
+    },
+    {
+      "id": "enosis_18",
+      "doc": "enosis",
+      "query": "What does the Bronze Mark certification require?",
+      "expected": "50+ records synchronized|50 records",
+      "passed": true,
+      "actual": "Bronze Mark requires 50+ records synchronized and 80%+ translation confidence.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 5, line 14 polyu-ifc-enosis.pdf, page 5, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 825
+        },
+        {
+          "node": "search",
+          "ms": 2446
+        },
+        {
+          "node": "narrow",
+          "ms": 443
+        },
+        {
+          "node": "answer",
+          "ms": 1182
+        }
+      ],
+      "latency_ms": 4898
+    },
+    {
+      "id": "enosis_19",
+      "doc": "enosis",
+      "query": "What does the Gold Mark certification require?",
+      "expected": "500+ records synchronized|500 records",
+      "passed": true,
+      "actual": "Gold Mark requires 500+ records synchronized and 90%+ translation confidence.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 5, line 14 polyu-ifc-enosis.pdf, page 5, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 837
+        },
+        {
+          "node": "search",
+          "ms": 2453
+        },
+        {
+          "node": "narrow",
+          "ms": 984
+        },
+        {
+          "node": "answer",
+          "ms": 1343
+        }
+      ],
+      "latency_ms": 5619
+    },
+    {
+      "id": "enosis_20",
+      "doc": "enosis",
+      "query": "What is the RAM footprint of the ZVec edge database?",
+      "expected": "64MB|64 MB",
+      "passed": true,
+      "actual": "<64MB\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 4, line 2; Source 3: polyu-ifc-enosis.pdf, page 12, line 14; Source 4: polyu-ifc-enosis.pdf, page 4, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 455
+        },
+        {
+          "node": "search",
+          "ms": 2483
+        },
+        {
+          "node": "narrow",
+          "ms": 631
+        },
+        {
+          "node": "answer",
+          "ms": 1794
+        }
+      ],
+      "latency_ms": 5364
+    },
+    {
+      "id": "enosis_21",
+      "doc": "enosis",
+      "query": "What is the ZVec local query capacity?",
+      "expected": "8,000+ QPS|8000",
+      "passed": true,
+      "actual": "8,000+ QPS on standard CPUs\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 4, line 2 polyu-ifc-enosis.pdf, page 4, line 2",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 660
+        },
+        {
+          "node": "search",
+          "ms": 2479
+        },
+        {
+          "node": "narrow",
+          "ms": 530
+        },
+        {
+          "node": "answer",
+          "ms": 1193
+        }
+      ],
+      "latency_ms": 4863
+    },
+    {
+      "id": "enosis_22",
+      "doc": "enosis",
+      "query": "What is the migration cost for clinics adopting Enosis?",
+      "expected": "HK$0|zero",
+      "passed": true,
+      "actual": "HK$0\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 2, line 10; Source 2: polyu-ifc-enosis.pdf, page 7, line 24; Source 6: polyu-ifc-enosis.pdf, page 8, line 11 polyu-ifc-enosis.pdf, page 7, line 24 polyu-ifc-enosis.pdf, page 8, line 11 polyu-ifc-enosis.pdf, page 6, line 24",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 429
+        },
+        {
+          "node": "search",
+          "ms": 290
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1820
+        }
+      ],
+      "latency_ms": 2541
+    },
+    {
+      "id": "enosis_23",
+      "doc": "enosis",
+      "query": "What is the implementation time per clinic?",
+      "expected": "15 minutes|under 15",
+      "passed": true,
+      "actual": "Implementation time: <15 minutes per clinic\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 8, line 11 polyu-ifc-enosis.pdf, page 8, line 11",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 687
+        },
+        {
+          "node": "search",
+          "ms": 287
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1458
+        }
+      ],
+      "latency_ms": 2435
+    },
+    {
+      "id": "enosis_24",
+      "doc": "enosis",
+      "query": "What is the Year 3 target revenue?",
+      "expected": "HK$36.0 Million|36 million",
+      "passed": true,
+      "actual": "HK$36.0 Million\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 8, line 11 polyu-ifc-enosis.pdf, page 8, line 24 polyu-ifc-enosis.pdf, page 5, line 25",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 817
+        },
+        {
+          "node": "search",
+          "ms": 305
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1604
+        }
+      ],
+      "latency_ms": 2728
+    },
+    {
+      "id": "enosis_25",
+      "doc": "enosis",
+      "query": "How many citizens are served by the GBA hospital network?",
+      "expected": "86 Million|86 million",
+      "passed": true,
+      "actual": "86 Million citizens\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 5, line 25 polyu-ifc-enosis.pdf, page 13, line 3",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 679
+        },
+        {
+          "node": "search",
+          "ms": 287
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1707
+        }
+      ],
+      "latency_ms": 2676
+    },
+    {
+      "id": "enosis_26",
+      "doc": "enosis",
+      "query": "How many private clinics are in the Hong Kong target pool?",
+      "expected": "3,000+|3000",
+      "passed": true,
+      "actual": "3,000+ practices\nFurther analysis needed\npolyu-ifc-enosis.pdf, page 5, line 25 polyu-ifc-enosis.pdf, page 6, line 11",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 651
+        },
+        {
+          "node": "search",
+          "ms": 289
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2005
+        },
+        {
+          "node": "verify",
+          "ms": 554
+        },
+        {
+          "node": "wide_search",
+          "ms": 4034
+        }
+      ],
+      "latency_ms": 7537
+    },
+    {
+      "id": "enosis_27",
+      "doc": "enosis",
+      "query": "How many small-to-medium factories are in the GBA pool?",
+      "expected": "600,000+|600000",
+      "passed": true,
+      "actual": "600,000+ small-to-medium factories in the GBA pool.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 9, line 13",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 979
+        },
+        {
+          "node": "search",
+          "ms": 293
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1514
+        }
+      ],
+      "latency_ms": 2788
+    },
+    {
+      "id": "enosis_28",
+      "doc": "enosis",
+      "query": "Who is the Lead AI Architect on the team?",
+      "expected": "Dr. Alan Lau",
+      "passed": true,
+      "actual": "Dr. Alan Lau (Lead AI Architect), Former Senior AI Research Engineer at Alibaba Tongyi Lab, specializing in embedded vector systems and local-first data parsing.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 9, line 23 polyu-ifc-enosis.pdf, page 9, line 23",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 484
+        },
+        {
+          "node": "search",
+          "ms": 285
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1537
+        }
+      ],
+      "latency_ms": 2308
+    },
+    {
+      "id": "enosis_29",
+      "doc": "enosis",
+      "query": "Who serves as GBA Regulatory Counsel?",
+      "expected": "Professor Sarah Tsang|Sarah Tsang",
+      "passed": true,
+      "actual": "Professor Sarah Tsang serves as GBA Regulatory Counsel.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 9, line 23 polyu-ifc-enosis.pdf, page 9, line 23",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 469
+        },
+        {
+          "node": "search",
+          "ms": 151
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1818
+        }
+      ],
+      "latency_ms": 2441
+    },
+    {
+      "id": "enosis_30",
+      "doc": "enosis",
+      "query": "Which industrial standard does the Edge Agent map to in manufacturing?",
+      "expected": "OPC-UA",
+      "passed": true,
+      "actual": "The Edge Agent maps to the global OPC-UA standard in manufacturing.\nInsufficient data to recommend.\npolyu-ifc-enosis.pdf, page 13, line 13; Source 7: polyu-ifc-enosis.pdf, page 9, line 13 polyu-ifc-enosis.pdf, page 13, line 13 polyu-ifc-enosis.pdf, page 9, line 13",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 819
+        },
+        {
+          "node": "search",
+          "ms": 2562
+        },
+        {
+          "node": "narrow",
+          "ms": 850
+        },
+        {
+          "node": "answer",
+          "ms": 1833
+        }
+      ],
+      "latency_ms": 6066
+    },
+    {
+      "id": "syllabus_1",
+      "doc": "syllabus",
+      "query": "What is the course code?",
+      "expected": "JMSC2043",
+      "passed": true,
+      "actual": "JMSC2043\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 485
+        },
+        {
+          "node": "search",
+          "ms": 310
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1823
+        }
+      ],
+      "latency_ms": 2620
+    },
+    {
+      "id": "syllabus_2",
+      "doc": "syllabus",
+      "query": "What is the course title?",
+      "expected": "Health Communication",
+      "passed": true,
+      "actual": "JMSC2043 Health Communication\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 813
+        },
+        {
+          "node": "search",
+          "ms": 281
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1189
+        }
+      ],
+      "latency_ms": 2285
+    },
+    {
+      "id": "syllabus_3",
+      "doc": "syllabus",
+      "query": "Who is the course instructor?",
+      "expected": "Junhan Chen",
+      "passed": true,
+      "actual": "The course instructor is Junhan Chen.\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 820
+        },
+        {
+          "node": "search",
+          "ms": 285
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1459
+        }
+      ],
+      "latency_ms": 2565
+    },
+    {
+      "id": "syllabus_4",
+      "doc": "syllabus",
+      "query": "What is the instructor's email?",
+      "expected": "junhanch@hku.hk",
+      "passed": true,
+      "actual": "junhanch@hku.hk\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 1041
+        },
+        {
+          "node": "search",
+          "ms": 3669
+        },
+        {
+          "node": "narrow",
+          "ms": 830
+        },
+        {
+          "node": "answer",
+          "ms": 1398
+        }
+      ],
+      "latency_ms": 6941
+    },
+    {
+      "id": "syllabus_5",
+      "doc": "syllabus",
+      "query": "When does the lecture take place?",
+      "expected": "Tue 1000-1150|Tuesday 10:00|10:00",
+      "passed": true,
+      "actual": "The lecture takes place on Tue 1000-1150.\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 650
+        },
+        {
+          "node": "search",
+          "ms": 304
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1663
+        }
+      ],
+      "latency_ms": 2620
+    },
+    {
+      "id": "syllabus_6",
+      "doc": "syllabus",
+      "query": "What is the course venue?",
+      "expected": "EH102",
+      "passed": true,
+      "actual": "EH102\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 816
+        },
+        {
+          "node": "search",
+          "ms": 289
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1471
+        }
+      ],
+      "latency_ms": 2579
+    },
+    {
+      "id": "syllabus_7",
+      "doc": "syllabus",
+      "query": "How many weeks does the course schedule span?",
+      "expected": "13",
+      "passed": true,
+      "actual": "The course schedule spans 13 weeks, from Week 1 (Sep 1) to Week 13 (Nov 24), with Week 7 (Oct 13) designated as \"No Class \u2013 Reading Week.\"\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14; Source 3: Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 14 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 14 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 411
+        },
+        {
+          "node": "search",
+          "ms": 288
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2782
+        }
+      ],
+      "latency_ms": 3484
+    },
+    {
+      "id": "syllabus_8",
+      "doc": "syllabus",
+      "query": "Which week is Reading Week?",
+      "expected": "Week 7|7",
+      "passed": true,
+      "actual": "Week 7, Oct 13\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 651
+        },
+        {
+          "node": "search",
+          "ms": 145
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1286
+        }
+      ],
+      "latency_ms": 2085
+    },
+    {
+      "id": "syllabus_9",
+      "doc": "syllabus",
+      "query": "What percentage of the grade is class participation?",
+      "expected": "20%",
+      "passed": true,
+      "actual": "20%\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 862
+        },
+        {
+          "node": "search",
+          "ms": 302
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1665
+        }
+      ],
+      "latency_ms": 2831
+    },
+    {
+      "id": "syllabus_10",
+      "doc": "syllabus",
+      "query": "What percentage is the in-class quizzes?",
+      "expected": "10%",
+      "passed": true,
+      "actual": "10%\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 979
+        },
+        {
+          "node": "search",
+          "ms": 161
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1474
+        }
+      ],
+      "latency_ms": 2616
+    },
+    {
+      "id": "syllabus_11",
+      "doc": "syllabus",
+      "query": "How many in-class quiz sessions are there?",
+      "expected": "two|2",
+      "passed": true,
+      "actual": "There are two in-class quiz sessions.\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 14; Source 2: Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 14; Source 2: Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 544
+        },
+        {
+          "node": "search",
+          "ms": 281
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1771
+        }
+      ],
+      "latency_ms": 2598
+    },
+    {
+      "id": "syllabus_12",
+      "doc": "syllabus",
+      "query": "What is the weight of the final written project report?",
+      "expected": "30%",
+      "passed": true,
+      "actual": "30%\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 1006
+        },
+        {
+          "node": "search",
+          "ms": 155
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1648
+        }
+      ],
+      "latency_ms": 2812
+    },
+    {
+      "id": "syllabus_13",
+      "doc": "syllabus",
+      "query": "When is the project proposal due?",
+      "expected": "Oct 11|October 11",
+      "passed": true,
+      "actual": "Oct 11\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 981
+        },
+        {
+          "node": "search",
+          "ms": 156
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1677
+        }
+      ],
+      "latency_ms": 2816
+    },
+    {
+      "id": "syllabus_14",
+      "doc": "syllabus",
+      "query": "When is the final group presentation?",
+      "expected": "Nov 24|November 24",
+      "passed": false,
+      "actual": "The final group presentation is due Nov 30, with the presentation component weighted at 30% and the peer evaluation at 10% (both due Nov 30). The presentation itself is 15 minutes in length.\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 5, line 7",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 601
+        },
+        {
+          "node": "search",
+          "ms": 2547
+        },
+        {
+          "node": "narrow",
+          "ms": 915
+        },
+        {
+          "node": "answer",
+          "ms": 1790
+        }
+      ],
+      "latency_ms": 5855
+    },
+    {
+      "id": "syllabus_15",
+      "doc": "syllabus",
+      "query": "What platform is used for assignment submission?",
+      "expected": "Moodle",
+      "passed": true,
+      "actual": "Moodle\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 5, line 23 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 5, line 23",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 502
+        },
+        {
+          "node": "search",
+          "ms": 2561
+        },
+        {
+          "node": "narrow",
+          "ms": 876
+        },
+        {
+          "node": "answer",
+          "ms": 1637
+        }
+      ],
+      "latency_ms": 5579
+    },
+    {
+      "id": "syllabus_16",
+      "doc": "syllabus",
+      "query": "What is the weight of the peer evaluation?",
+      "expected": "10%",
+      "passed": true,
+      "actual": "10%\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35; Source 8: Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 656
+        },
+        {
+          "node": "search",
+          "ms": 150
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1817
+        }
+      ],
+      "latency_ms": 2625
+    },
+    {
+      "id": "syllabus_17",
+      "doc": "syllabus",
+      "query": "What is the weight of the Health in the Media presentation?",
+      "expected": "15%",
+      "passed": true,
+      "actual": "15%\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 505
+        },
+        {
+          "node": "search",
+          "ms": 161
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1268
+        }
+      ],
+      "latency_ms": 1936
+    },
+    {
+      "id": "syllabus_18",
+      "doc": "syllabus",
+      "query": "What is the late submission penalty per day?",
+      "expected": "10%",
+      "passed": true,
+      "actual": "10% deduction of the full grade immediately and a 10% deduction for every additional day later thereafter.\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 5, line 23",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 513
+        },
+        {
+          "node": "search",
+          "ms": 2567
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1563
+        }
+      ],
+      "latency_ms": 4646
+    },
+    {
+      "id": "syllabus_19",
+      "doc": "syllabus",
+      "query": "How long is the Health in the Media presentation?",
+      "expected": "5-minute|5 minutes",
+      "passed": true,
+      "actual": "The Health in the Media presentation is 5 minutes long.\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 784
+        },
+        {
+          "node": "search",
+          "ms": 146
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1655
+        }
+      ],
+      "latency_ms": 2588
+    },
+    {
+      "id": "syllabus_20",
+      "doc": "syllabus",
+      "query": "What is the page limit for the project proposal?",
+      "expected": "2 pages",
+      "passed": true,
+      "actual": "2 pages max\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 981
+        },
+        {
+          "node": "search",
+          "ms": 149
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1982
+        }
+      ],
+      "latency_ms": 3114
+    },
+    {
+      "id": "syllabus_21",
+      "doc": "syllabus",
+      "query": "What is the page limit for the final report?",
+      "expected": "8 pages",
+      "passed": false,
+      "actual": "The retrieved documents do not specify a page limit for the final report. The proposal has a 2-page maximum, but no page limit is stated for the final written report.\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 981
+        },
+        {
+          "node": "search",
+          "ms": 2446
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1442
+        }
+      ],
+      "latency_ms": 4872
+    },
+    {
+      "id": "syllabus_22",
+      "doc": "syllabus",
+      "query": "What font and size are required for the proposal and report?",
+      "expected": "12pt Times New Roman|Times New Roman",
+      "passed": true,
+      "actual": "12pt Times New Roman, double-spaced\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 4, line 35",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 1020
+        },
+        {
+          "node": "search",
+          "ms": 2838
+        },
+        {
+          "node": "narrow",
+          "ms": 693
+        },
+        {
+          "node": "answer",
+          "ms": 1418
+        }
+      ],
+      "latency_ms": 5972
+    },
+    {
+      "id": "syllabus_23",
+      "doc": "syllabus",
+      "query": "What is the instructor's office location?",
+      "expected": "Eliot Hall 209",
+      "passed": true,
+      "actual": "Eliot Hall 209\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 6 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 1, line 6",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 951
+        },
+        {
+          "node": "search",
+          "ms": 297
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1174
+        }
+      ],
+      "latency_ms": 2424
+    },
+    {
+      "id": "syllabus_24",
+      "doc": "syllabus",
+      "query": "Which theory is covered in Week 2?",
+      "expected": "Theory of Planned Behavior|Health Belief Model|Theory of Reasoned Action",
+      "passed": true,
+      "actual": "Behavior Change Theories 1: Theory of Planned Behavior, Theory of Reasoned Action, Health Belief Model\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 754
+        },
+        {
+          "node": "search",
+          "ms": 151
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1716
+        }
+      ],
+      "latency_ms": 2623
+    },
+    {
+      "id": "syllabus_25",
+      "doc": "syllabus",
+      "query": "What is the Week 9 topic?",
+      "expected": "Health Misinformation",
+      "passed": true,
+      "actual": "Health Communication in Practice 1: Health Misinformation\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 817
+        },
+        {
+          "node": "search",
+          "ms": 171
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1478
+        }
+      ],
+      "latency_ms": 2467
+    },
+    {
+      "id": "syllabus_26",
+      "doc": "syllabus",
+      "query": "What is the Week 11 topic?",
+      "expected": "Doctor-patient communication",
+      "passed": true,
+      "actual": "Health Communication in Practice 3: Doctor-patient communication\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14; Source 3: Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 14 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14; Source 3: Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 3, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 483
+        },
+        {
+          "node": "search",
+          "ms": 166
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1960
+        }
+      ],
+      "latency_ms": 2612
+    },
+    {
+      "id": "syllabus_27",
+      "doc": "syllabus",
+      "query": "What does Week 8 cover?",
+      "expected": "Fear Appeals and Social Norms",
+      "passed": true,
+      "actual": "Week 8 covers \"Health Communication Design 4: Fear Appeals and Social Norms\" .\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 653
+        },
+        {
+          "node": "search",
+          "ms": 149
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1923
+        }
+      ],
+      "latency_ms": 2727
+    },
+    {
+      "id": "syllabus_28",
+      "doc": "syllabus",
+      "query": "What letter grade corresponds to 96-100 points?",
+      "expected": "A+|A plus",
+      "passed": true,
+      "actual": "A+\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 11, line 59 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 11, line 59",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 495
+        },
+        {
+          "node": "search",
+          "ms": 332
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1685
+        }
+      ],
+      "latency_ms": 2514
+    },
+    {
+      "id": "syllabus_29",
+      "doc": "syllabus",
+      "query": "What letter grade corresponds to 83-85 points?",
+      "expected": "B",
+      "passed": true,
+      "actual": "B+\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 11, line 59 Syllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 11, line 59",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 380
+        },
+        {
+          "node": "search",
+          "ms": 287
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1299
+        }
+      ],
+      "latency_ms": 1968
+    },
+    {
+      "id": "syllabus_30",
+      "doc": "syllabus",
+      "query": "What is the date of the Reading Week no-class week?",
+      "expected": "Oct 13|October 13",
+      "passed": true,
+      "actual": "Oct 13\nInsufficient data to recommend.\nSyllabus_JMSC2043 Health Communication_Fall 2026.pdf, page 2, line 14",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 815
+        },
+        {
+          "node": "search",
+          "ms": 166
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1150
+        }
+      ],
+      "latency_ms": 2134
+    },
+    {
+      "id": "annual_report_1",
+      "doc": "annual_report",
+      "query": "What is the company name in the annual report?",
+      "expected": "PDF Solutions",
+      "passed": true,
+      "actual": "PDF Solutions, Inc.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 53, line 3 FINAL Annual Report.pdf, page 7, line 28",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 648
+        },
+        {
+          "node": "search",
+          "ms": 288
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2012
+        }
+      ],
+      "latency_ms": 2950
+    },
+    {
+      "id": "annual_report_2",
+      "doc": "annual_report",
+      "query": "Which fiscal year does the annual report cover?",
+      "expected": "2025|December 31, 2025",
+      "passed": true,
+      "actual": "The annual report covers the fiscal year ended December 31, 2025.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 79, line 40 FINAL Annual Report.pdf, page 79, line 15 FINAL Annual Report.pdf, page 88, line 35 FINAL Annual Report.pdf, page 87, line 10 FINAL Annual Report.pdf, page 54, line 31 FINAL Annual Report.pdf, page 48, line 17 FINAL Annual Report.pdf, page 53, line 12 FINAL Annual Report.pdf, page 87, line 30 FINAL Annual Report.pdf, page 92, line 15 FINAL Annual Report.pdf, page 88, line 35 FINAL Annual Report.pdf, page 54, line 31 FINAL Annual Report.pdf, page 53, line 12",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 976
+        },
+        {
+          "node": "search",
+          "ms": 156
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2792
+        }
+      ],
+      "latency_ms": 3926
+    },
+    {
+      "id": "annual_report_3",
+      "doc": "annual_report",
+      "query": "What were total revenues for 2025?",
+      "expected": "$219 million|219.0 million|219",
+      "passed": false,
+      "actual": "Based on the retrieved documents, total revenues for 2025 were $179,465 thousand.\n\nThis is supported by Source 19, which shows a revenue breakdown table for the year ended December 31, 2025, with a total of $179,465 (in thousands) .\nFurther analysis needed\nFINAL Annual Report.pdf, page 44, line 43",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 827
+        },
+        {
+          "node": "search",
+          "ms": 292
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1500
+        },
+        {
+          "node": "verify",
+          "ms": 650
+        },
+        {
+          "node": "wide_search",
+          "ms": 4755
+        }
+      ],
+      "latency_ms": 8027
+    },
+    {
+      "id": "annual_report_4",
+      "doc": "annual_report",
+      "query": "What was the year-over-year revenue growth?",
+      "expected": "22%",
+      "passed": true,
+      "actual": "Total revenues were $219,024 thousand for the year ended December 31, 2025, compared to $179,465 thousand for the year ended December 31, 2024, an increase of $39,559 thousand, or 22%.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 45, line 15 FINAL Annual Report.pdf, page 40, line 3 FINAL Annual Report.pdf, page 45, line 15 FINAL Annual Report.pdf, page 45, line 15 FINAL Annual Report.pdf, page 45, line 15 FINAL Annual Report.pdf, page 40, line 3",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 983
+        },
+        {
+          "node": "search",
+          "ms": 312
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2617
+        }
+      ],
+      "latency_ms": 3914
+    },
+    {
+      "id": "annual_report_5",
+      "doc": "annual_report",
+      "query": "What was platform revenue for 2025?",
+      "expected": "$181 million|181",
+      "passed": true,
+      "actual": "Platform revenue was $181.0 million for the year ended December 31, 2025.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 45, line 15 FINAL Annual Report.pdf, page 40, line 3 FINAL Annual Report.pdf, page 44, line 43 FINAL Annual Report.pdf, page 3, line 17 FINAL Annual Report.pdf, page 45, line 15 FINAL Annual Report.pdf, page 40, line 3 FINAL Annual Report.pdf, page 44, line 43 FINAL Annual Report.pdf, page 3, line 17",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 570
+        },
+        {
+          "node": "search",
+          "ms": 440
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1988
+        }
+      ],
+      "latency_ms": 3001
+    },
+    {
+      "id": "annual_report_6",
+      "doc": "annual_report",
+      "query": "What was volume-based revenue for 2025?",
+      "expected": "$38 million|38",
+      "passed": true,
+      "actual": "Volume-based revenue was $38.0 million for the year ended December 31, 2025.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 45, line 27 FINAL Annual Report.pdf, page 40, line 3 FINAL Annual Report.pdf, page 45, line 15 FINAL Annual Report.pdf, page 45, line 27 FINAL Annual Report.pdf, page 40, line 3 FINAL Annual Report.pdf, page 45, line 15",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 591
+        },
+        {
+          "node": "search",
+          "ms": 469
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2306
+        }
+      ],
+      "latency_ms": 3369
+    },
+    {
+      "id": "annual_report_7",
+      "doc": "annual_report",
+      "query": "What was recurring revenue for 2025?",
+      "expected": "$205 million|205",
+      "passed": true,
+      "actual": "Recurring revenue for 2025 was $205 million (up 41% year-over-year).\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 3, line 17 FINAL Annual Report.pdf, page 3, line 17 FINAL Annual Report.pdf, page 68, line 19",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 898
+        },
+        {
+          "node": "search",
+          "ms": 431
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1431
+        }
+      ],
+      "latency_ms": 2762
+    },
+    {
+      "id": "annual_report_8",
+      "doc": "annual_report",
+      "query": "What was the GAAP gross margin?",
+      "expected": "72%",
+      "passed": false,
+      "actual": "The documents do not explicitly state a \"GAAP gross margin.\" The closest figures provided are gross margin percentages of 82.7% (2026), 86.5% (2027), and 89.4% (2028), which are calculated from total COGS and revenue as presented in the financial model.\nInsufficient data to recommend.\nsample_financial_model.md, page 1, line 20 sample_financial_model.md, page 1, line 20 sample_financial_model.md, page 1, line 20 sample_financial_model.md, page 1, line 20",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 654
+        },
+        {
+          "node": "search",
+          "ms": 300
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2393
+        }
+      ],
+      "latency_ms": 3349
+    },
+    {
+      "id": "annual_report_9",
+      "doc": "annual_report",
+      "query": "What was the non-GAAP gross margin?",
+      "expected": "76%",
+      "passed": true,
+      "actual": "76%\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 3, line 17 FINAL Annual Report.pdf, page 3, line 17",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 478
+        },
+        {
+          "node": "search",
+          "ms": 287
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1312
+        }
+      ],
+      "latency_ms": 2079
+    },
+    {
+      "id": "annual_report_10",
+      "doc": "annual_report",
+      "query": "What was GAAP diluted EPS?",
+      "expected": "-0.02|$(0.02)|(0.02)",
+      "passed": true,
+      "actual": "GAAP diluted EPS was $(0.02) per share for 2025.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 3, line 17 FINAL Annual Report.pdf, page 3, line 17 FINAL Annual Report.pdf, page 83, line 28",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 861
+        },
+        {
+          "node": "search",
+          "ms": 149
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1553
+        }
+      ],
+      "latency_ms": 2566
+    },
+    {
+      "id": "annual_report_11",
+      "doc": "annual_report",
+      "query": "What was non-GAAP diluted EPS?",
+      "expected": "$0.94|0.94",
+      "passed": true,
+      "actual": "$0.94 per share (up 12% from $0.84 in 2024)\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 3, line 17 FINAL Annual Report.pdf, page 3, line 17",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 746
+        },
+        {
+          "node": "search",
+          "ms": 149
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1572
+        }
+      ],
+      "latency_ms": 2470
+    },
+    {
+      "id": "annual_report_12",
+      "doc": "annual_report",
+      "query": "What was the year-end backlog?",
+      "expected": "$254 million|254",
+      "passed": false,
+      "actual": "The retrieved documents do not explicitly state a \"year-end backlog\" figure. However, the closest related data is deferred revenues as of December 31, 2025, which totaled $20,306 thousand (current $19,441 thousand and non-current $865 thousand).\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 69, line 50 FINAL Annual Report.pdf, page 69, line 50 FINAL Annual Report.pdf, page 69, line 50 FINAL Annual Report.pdf, page 69, line 50",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 936
+        },
+        {
+          "node": "search",
+          "ms": 159
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2460
+        }
+      ],
+      "latency_ms": 3558
+    },
+    {
+      "id": "annual_report_13",
+      "doc": "annual_report",
+      "query": "Who is the Chief Executive Officer?",
+      "expected": "John K. Kibarian",
+      "passed": true,
+      "actual": "John K. Kibarian, Ph.D.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 18, line 21 FINAL Annual Report.pdf, page 18, line 21",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 945
+        },
+        {
+          "node": "search",
+          "ms": 2842
+        },
+        {
+          "node": "narrow",
+          "ms": 600
+        },
+        {
+          "node": "answer",
+          "ms": 1447
+        }
+      ],
+      "latency_ms": 5836
+    },
+    {
+      "id": "annual_report_14",
+      "doc": "annual_report",
+      "query": "What is the trading symbol for the company?",
+      "expected": "PDFS",
+      "passed": true,
+      "actual": "P&F Solutions, Inc. trades on the Nasdaq Stock Market under the symbol \"P&FS\" .\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 95, line 1; Source 14: FINAL Annual Report.pdf, page 95, line 1 FINAL Annual Report.pdf, page 95, line 1 FINAL Annual Report.pdf, page 95, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 736
+        },
+        {
+          "node": "search",
+          "ms": 148
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1471
+        }
+      ],
+      "latency_ms": 2358
+    },
+    {
+      "id": "annual_report_15",
+      "doc": "annual_report",
+      "query": "In which city is the company headquartered?",
+      "expected": "Santa Clara",
+      "passed": true,
+      "actual": "Santa Clara, California\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 96, line 30 FINAL Annual Report.pdf, page 4, line 36 FINAL Annual Report.pdf, page 8, line 6",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 1528
+        },
+        {
+          "node": "search",
+          "ms": 153
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1754
+        }
+      ],
+      "latency_ms": 3438
+    },
+    {
+      "id": "annual_report_16",
+      "doc": "annual_report",
+      "query": "What was the largest acquisition completed in 2025?",
+      "expected": "secureWISE",
+      "passed": true,
+      "actual": "The largest acquisition completed in 2025 was the acquisition of secureWISE\u2122 (SecureWise LLC) for a gross purchase price of approximately $130 million.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 31, line 39 FINAL Annual Report.pdf, page 3, line 17 FINAL Annual Report.pdf, page 31, line 39 FINAL Annual Report.pdf, page 3, line 17",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 690
+        },
+        {
+          "node": "search",
+          "ms": 3685
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2079
+        }
+      ],
+      "latency_ms": 6457
+    },
+    {
+      "id": "annual_report_17",
+      "doc": "annual_report",
+      "query": "What is secureWISE?",
+      "expected": "remote connectivity network|remote connectivity",
+      "passed": true,
+      "actual": "secureWISE is a remote equipment monitoring and access system designed to provide greater visibility into equipment uptime and utilization to improve health and functionality. It is architected to deliver secure, end-to-end remote connectivity to equipment over private networks to provide operator visibility into data to drive predictive analytics. Developed in the early 2000s, secureWISE was designed specifically to manage supplier remote connectivity for the semiconductor industry and was built to address the needs of both equipment suppliers and semiconductor manufacturing facilities. The system functions on a \u201csingle pane of glass\u201d concept, replacing potentially dozens of separate connections from different equipment suppliers with just one connection through secureWISE. It consists of proprietary software, dedicated hardware, and a managed network.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 14, line 5 FINAL Annual Report.pdf, page 13, line 35 FINAL Annual Report.pdf, page 13, line 35 FINAL Annual Report.pdf, page 14, line 5 FINAL Annual Report.pdf, page 14, line 5 FINAL Annual Report.pdf, page 14, line 5 FINAL Annual Report.pdf, page 14, line 5",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 524
+        },
+        {
+          "node": "search",
+          "ms": 159
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 3509
+        }
+      ],
+      "latency_ms": 4195
+    },
+    {
+      "id": "annual_report_18",
+      "doc": "annual_report",
+      "query": "Which two new Exensio modules were announced?",
+      "expected": "Exensio Scalable Analytics; Exensio Studio AI",
+      "passed": true,
+      "actual": "The two new Exensio modules announced were the Exensio Scalable Analytics module and the Exensio Studio AI module.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 3, line 29; Source 10: FINAL Annual Report.pdf, page 3, line 38 FINAL Annual Report.pdf, page 3, line 29 FINAL Annual Report.pdf, page 3, line 38",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 613
+        },
+        {
+          "node": "search",
+          "ms": 156
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1917
+        }
+      ],
+      "latency_ms": 2687
+    },
+    {
+      "id": "annual_report_19",
+      "doc": "annual_report",
+      "query": "What was non-GAAP diluted EPS in 2024?",
+      "expected": "$0.84|0.84",
+      "passed": true,
+      "actual": "$0.84 per share\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 3, line 17 FINAL Annual Report.pdf, page 3, line 17",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 481
+        },
+        {
+          "node": "search",
+          "ms": 289
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1812
+        }
+      ],
+      "latency_ms": 2585
+    },
+    {
+      "id": "annual_report_20",
+      "doc": "annual_report",
+      "query": "What is the projected size of the semiconductor industry before 2030?",
+      "expected": "$1 trillion|1 trillion",
+      "passed": true,
+      "actual": "The semiconductor industry is projected to reach $1 trillion before 2030.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 3, line 9 FINAL Annual Report.pdf, page 3, line 9 FINAL Annual Report.pdf, page 4, line 28",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 502
+        },
+        {
+          "node": "search",
+          "ms": 295
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1908
+        }
+      ],
+      "latency_ms": 2707
+    },
+    {
+      "id": "annual_report_21",
+      "doc": "annual_report",
+      "query": "What percentage of analysis can be automated by AI at scale?",
+      "expected": "90%",
+      "passed": false,
+      "actual": "The retrieved documents do not contain a specific percentage of analysis that can be automated by AI at scale. The text mentions enabling customers to interpret complex datasets and generate insights quickly on demand, and describes a new AI-Ready Data Platform designed to handle large data volumes, but no numerical percentage is provided.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 8, line 49 FINAL Annual Report.pdf, page 8, line 49",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 684
+        },
+        {
+          "node": "search",
+          "ms": 2505
+        },
+        {
+          "node": "narrow",
+          "ms": 913
+        },
+        {
+          "node": "answer",
+          "ms": 1996
+        },
+        {
+          "node": "verify",
+          "ms": 945
+        },
+        {
+          "node": "wide_search",
+          "ms": 3446
+        }
+      ],
+      "latency_ms": 10493
+    },
+    {
+      "id": "annual_report_22",
+      "doc": "annual_report",
+      "query": "Who is the partner for the Sapience MHe deployment?",
+      "expected": "SAP",
+      "passed": true,
+      "actual": "The partner for the Sapience MHe deployment is SAP.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 4, line 1 FINAL Annual Report.pdf, page 4, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 653
+        },
+        {
+          "node": "search",
+          "ms": 2531
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1473
+        }
+      ],
+      "latency_ms": 4659
+    },
+    {
+      "id": "annual_report_23",
+      "doc": "annual_report",
+      "query": "How many DirectScan systems were shipped to production fab users?",
+      "expected": "2|two",
+      "passed": true,
+      "actual": "Two systems\nFurther analysis needed\nFINAL Annual Report.pdf, page 4, line 9",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 612
+        },
+        {
+          "node": "search",
+          "ms": 294
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2479
+        },
+        {
+          "node": "verify",
+          "ms": 799
+        },
+        {
+          "node": "wide_search",
+          "ms": 3513
+        }
+      ],
+      "latency_ms": 7701
+    },
+    {
+      "id": "annual_report_24",
+      "doc": "annual_report",
+      "query": "What type of inspection tool is the eProbe?",
+      "expected": "electron beam|non-contact electron beam|e-beam",
+      "passed": true,
+      "actual": "The eProbe is a non-contact e-beam tool designed for contactless measurement of product layout, functioning as a contactless electrical tester that jumps from one device under test (DUT) to another, measuring voltage contrast at specific pads of interest while skipping dielectric regions.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 11, line 49; Source 2: FINAL Annual Report.pdf, page 11, line 42 FINAL Annual Report.pdf, page 11, line 49 FINAL Annual Report.pdf, page 11, line 42",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 743
+        },
+        {
+          "node": "search",
+          "ms": 2474
+        },
+        {
+          "node": "narrow",
+          "ms": 553
+        },
+        {
+          "node": "answer",
+          "ms": 2215
+        }
+      ],
+      "latency_ms": 5987
+    },
+    {
+      "id": "annual_report_25",
+      "doc": "annual_report",
+      "query": "What were cash and cash equivalents at year-end 2025?",
+      "expected": "$42.2 million|42.2",
+      "passed": true,
+      "actual": "$42.2 million\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 48, line 17 FINAL Annual Report.pdf, page 51, line 31 FINAL Annual Report.pdf, page 59, line 47",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 490
+        },
+        {
+          "node": "search",
+          "ms": 3657
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1421
+        }
+      ],
+      "latency_ms": 5571
+    },
+    {
+      "id": "annual_report_26",
+      "doc": "annual_report",
+      "query": "When was the 2025 Users Conference and Analyst Day held?",
+      "expected": "December",
+      "passed": true,
+      "actual": "The retrieved documents do not contain any information about a 2025 Users Conference and Analyst Day. The documents cover PDF Solutions, Inc.'s Annual Report for the fiscal year ended December 31, 2025, including financial results, executive signatures, and accounting standards, but no mention of a Users Conference or Analyst Day event.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 44, line 43; Source 2: FINAL Annual Report.pdf, page 89, line 13; Source 3: FINAL Annual Report.pdf, page 77, line 14; Source 4: FINAL Annual Report.pdf, page 3, line 17; Source 5: FINAL Annual Report.pdf, page 53, line 12; Source 6: FINAL Annual Report.pdf, page 66, line 23; Source 7: FINAL Annual Report.pdf, page 93, line 4; Source 8: FINAL Annual Report.pdf, page 94, line 8; Source 9: FINAL Annual Report.pdf, page 61, line 31; Source 10: FINAL Annual Report.pdf, page 69, line 50; Source 11: FINAL Annual Report.pdf, page 88, line 35; Source 12: FINAL Annual Report.pdf, page 46, line 23; Source 13: FINAL Annual Report.pdf, page 4, line 28; Source 14: FINAL Annual Report.pdf, page 37, line 16; Source 15: FINAL Annual Report.pdf, page 90, line 50; Source 16: FINAL Annual Report.pdf, page 4, line 36",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 382
+        },
+        {
+          "node": "search",
+          "ms": 283
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 3179
+        },
+        {
+          "node": "verify",
+          "ms": 902
+        },
+        {
+          "node": "wide_search",
+          "ms": 3677
+        }
+      ],
+      "latency_ms": 8428
+    },
+    {
+      "id": "annual_report_27",
+      "doc": "annual_report",
+      "query": "What is the fiscal year end date?",
+      "expected": "December 31, 2025|31 December 2025",
+      "passed": true,
+      "actual": "The fiscal year end date is December 31. This is evidenced by multiple references to \"Year Ended December 31, 2025,\" \"December 31, 2024,\" and \"December 31, 2023\" throughout the financial statements and disclosures.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 79, line 40 FINAL Annual Report.pdf, page 79, line 15 FINAL Annual Report.pdf, page 48, line 17 FINAL Annual Report.pdf, page 44, line 43 FINAL Annual Report.pdf, page 84, line 3",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 745
+        },
+        {
+          "node": "search",
+          "ms": 154
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2141
+        }
+      ],
+      "latency_ms": 3043
+    },
+    {
+      "id": "annual_report_28",
+      "doc": "annual_report",
+      "query": "What is the par value of the common stock?",
+      "expected": "$0.00015|0.00015",
+      "passed": true,
+      "actual": "$0.00015 par value\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 56, line 32 FINAL Annual Report.pdf, page 56, line 32",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 487
+        },
+        {
+          "node": "search",
+          "ms": 153
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1327
+        }
+      ],
+      "latency_ms": 1970
+    },
+    {
+      "id": "annual_report_29",
+      "doc": "annual_report",
+      "query": "What is the commission file number?",
+      "expected": "000-31311",
+      "passed": true,
+      "actual": "000-31311\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 4, line 36",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 488
+        },
+        {
+          "node": "search",
+          "ms": 2432
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1143
+        }
+      ],
+      "latency_ms": 4066
+    },
+    {
+      "id": "annual_report_30",
+      "doc": "annual_report",
+      "query": "What was the year-over-year growth of volume-based revenue?",
+      "expected": "70%",
+      "passed": true,
+      "actual": "Volume-based revenue increased by $15.7 million, or 70%, year-over-year from 2024 to 2025.\nInsufficient data to recommend.\nFINAL Annual Report.pdf, page 45, line 27 FINAL Annual Report.pdf, page 44, line 43 FINAL Annual Report.pdf, page 45, line 15 FINAL Annual Report.pdf, page 45, line 27 FINAL Annual Report.pdf, page 44, line 43 FINAL Annual Report.pdf, page 45, line 15",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 514
+        },
+        {
+          "node": "search",
+          "ms": 298
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2134
+        }
+      ],
+      "latency_ms": 2949
+    },
+    {
+      "id": "lifexp_1",
+      "doc": "lifexp",
+      "query": "What is the name of the product in the PRD?",
+      "expected": "LifeXP",
+      "passed": true,
+      "actual": "LifeXP\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 1, line 1 LifeXP PRD.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 428
+        },
+        {
+          "node": "search",
+          "ms": 285
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1600
+        }
+      ],
+      "latency_ms": 2316
+    },
+    {
+      "id": "lifexp_2",
+      "doc": "lifexp",
+      "query": "What is the PRD version?",
+      "expected": "v1.0|1.0",
+      "passed": true,
+      "actual": "v1.0\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 492
+        },
+        {
+          "node": "search",
+          "ms": 153
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1161
+        }
+      ],
+      "latency_ms": 1808
+    },
+    {
+      "id": "lifexp_3",
+      "doc": "lifexp",
+      "query": "What is the product vision of LifeXP?",
+      "expected": "sustainable feedback loops for lifelong growth",
+      "passed": true,
+      "actual": "LifeXP helps people build sustainable feedback loops for lifelong growth. Many of the most valuable things in life have feedback cycles measured in months or years. Because progress is difficult to perceive, people often lose motivation despite making meaningful progress. LifeXP makes invisible progress visible.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 1, line 1 LifeXP PRD.pdf, page 1, line 1",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 392
+        },
+        {
+          "node": "search",
+          "ms": 149
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2068
+        }
+      ],
+      "latency_ms": 2611
+    },
+    {
+      "id": "lifexp_4",
+      "doc": "lifexp",
+      "query": "Which two independent systems make up the product?",
+      "expected": "Maintenance; Growth",
+      "passed": true,
+      "actual": "The product consists of two independent systems: 1. Maintenance and 2. Growth.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 2, line 6 LifeXP PRD.pdf, page 2, line 6",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 660
+        },
+        {
+          "node": "search",
+          "ms": 153
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1783
+        }
+      ],
+      "latency_ms": 2598
+    },
+    {
+      "id": "lifexp_5",
+      "doc": "lifexp",
+      "query": "What are the five design principles?",
+      "expected": "No pressure; No streaks; No punishment; No red notifications; No guilt",
+      "passed": false,
+      "actual": "The five design principles are: 1) No pressure, 2) Growth should feel inevitable, 3) Natural language first, 4) Human first, AI assists, 5) AI organizes. The user owns the story.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 1, line 1; Source 7: LifeXP PRD.pdf, page 2, line 6 LifeXP PRD.pdf, page 1, line 1 LifeXP PRD.pdf, page 2, line 6",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 1011
+        },
+        {
+          "node": "search",
+          "ms": 152
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2306
+        }
+      ],
+      "latency_ms": 3472
+    },
+    {
+      "id": "lifexp_6",
+      "doc": "lifexp",
+      "query": "How many ways are there to record an experience?",
+      "expected": "two|2",
+      "passed": true,
+      "actual": "There are two ways to record an experience.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 3, line 46 LifeXP PRD.pdf, page 3, line 46",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 815
+        },
+        {
+          "node": "search",
+          "ms": 291
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2330
+        }
+      ],
+      "latency_ms": 3438
+    },
+    {
+      "id": "lifexp_7",
+      "doc": "lifexp",
+      "query": "What is Method A for recording?",
+      "expected": "Chat naturally|chat",
+      "passed": true,
+      "actual": "Method A is \"Chat naturally.\" Example: \"Went to Japanese class for 90 minutes today. AI extracts Japanese +1.5 hours Language.\"\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 3, line 46 LifeXP PRD.pdf, page 3, line 46",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 656
+        },
+        {
+          "node": "search",
+          "ms": 156
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1507
+        }
+      ],
+      "latency_ms": 2320
+    },
+    {
+      "id": "lifexp_8",
+      "doc": "lifexp",
+      "query": "What is Method B for recording?",
+      "expected": "Structured entry|Template",
+      "passed": true,
+      "actual": "Method B is \"Structured entry\" with a \"Template\" containing \"Title, Duration, Skill, Notes\" .\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 3, line 46 LifeXP PRD.pdf, page 3, line 46",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 426
+        },
+        {
+          "node": "search",
+          "ms": 156
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1684
+        }
+      ],
+      "latency_ms": 2268
+    },
+    {
+      "id": "lifexp_9",
+      "doc": "lifexp",
+      "query": "What do skills accumulate instead of points or XP?",
+      "expected": "evidence",
+      "passed": true,
+      "actual": "Skills accumulate evidence.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 3, line 46; Source 3: LifeXP PRD.pdf, page 5, line 18 LifeXP PRD.pdf, page 3, line 46; Source 3: LifeXP PRD.pdf, page 5, line 18",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 489
+        },
+        {
+          "node": "search",
+          "ms": 151
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1650
+        }
+      ],
+      "latency_ms": 2292
+    },
+    {
+      "id": "lifexp_10",
+      "doc": "lifexp",
+      "query": "What is the current milestone example for Japanese?",
+      "expected": "JLPT N4|N4",
+      "passed": true,
+      "actual": "The current milestone example for Japanese is JLPT N4.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 3, line 46; Source 2: LifeXP PRD.pdf, page 5, line 18 LifeXP PRD.pdf, page 3, line 46 LifeXP PRD.pdf, page 5, line 18",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 983
+        },
+        {
+          "node": "search",
+          "ms": 281
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2175
+        }
+      ],
+      "latency_ms": 3440
+    },
+    {
+      "id": "lifexp_11",
+      "doc": "lifexp",
+      "query": "Which hour thresholds form the Japanese milestone ladder?",
+      "expected": "150; 400; 800; 1300",
+      "passed": true,
+      "actual": "The Japanese milestone ladder consists of the following hour thresholds: 0 hours, 150 hours, 400 hours, 800 hours, 1300 hours, leading to the JLPT N3 milestone.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 5, line 18 LifeXP PRD.pdf, page 5, line 18 LifeXP PRD.pdf, page 3, line 46",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 858
+        },
+        {
+          "node": "search",
+          "ms": 292
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2621
+        }
+      ],
+      "latency_ms": 3774
+    },
+    {
+      "id": "lifexp_12",
+      "doc": "lifexp",
+      "query": "What one question should the homepage answer?",
+      "expected": "How has my life grown",
+      "passed": true,
+      "actual": "\"How has my life grown?\"\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 8, line 20",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 479
+        },
+        {
+          "node": "search",
+          "ms": 157
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1321
+        }
+      ],
+      "latency_ms": 1960
+    },
+    {
+      "id": "lifexp_13",
+      "doc": "lifexp",
+      "query": "What is the monetisation model?",
+      "expected": "Freemium|freemium",
+      "passed": true,
+      "actual": "The monetisation model is a Freemium model. Free tier includes Manual recording, Up to 3 active skills, and the ability to delete/modify anything, but can only add new records for today & yesterday. Premium tier includes Unlimited skills, Backdate records, Calendar sync, AI categorisation, Cloud sync, Advanced analytics, and Long-term possibility.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 9, line 69 LifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 9, line 69",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 1311
+        },
+        {
+          "node": "search",
+          "ms": 154
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2630
+        }
+      ],
+      "latency_ms": 4097
+    },
+    {
+      "id": "lifexp_14",
+      "doc": "lifexp",
+      "query": "How many active skills does the free tier allow?",
+      "expected": "3",
+      "passed": true,
+      "actual": "Up to 3 active skills\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 8, line 20",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 381
+        },
+        {
+          "node": "search",
+          "ms": 281
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1303
+        }
+      ],
+      "latency_ms": 1968
+    },
+    {
+      "id": "lifexp_15",
+      "doc": "lifexp",
+      "query": "What is Stage 0 of the roadmap?",
+      "expected": "Prototype",
+      "passed": true,
+      "actual": "Stage 0 \u2014 Prototype (1\u20132 weeks). Goal: Validate whether people understand the idea. Features: Chat input, Structured input, Experience timeline, Skill summary. Ignore: Accounts, Authentication, Subscriptions, Integrations. Focus on usability.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 9, line 69 LifeXP PRD.pdf, page 9, line 69",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 652
+        },
+        {
+          "node": "search",
+          "ms": 148
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1844
+        }
+      ],
+      "latency_ms": 2647
+    },
+    {
+      "id": "lifexp_16",
+      "doc": "lifexp",
+      "query": "What is Stage 1 of the roadmap?",
+      "expected": "MVP",
+      "passed": true,
+      "actual": "Stage 1 \u2014 MVP (4\u20136 weeks). Goal: Users can actually use LifeXP daily. Features: Authentication, Database, Dashboard, Growth, Maintenance, Skill pages, Basic AI classification.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 9, line 69 LifeXP PRD.pdf, page 9, line 69",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 629
+        },
+        {
+          "node": "search",
+          "ms": 150
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1647
+        }
+      ],
+      "latency_ms": 2429
+    },
+    {
+      "id": "lifexp_17",
+      "doc": "lifexp",
+      "query": "What is the first feature listed for Stage 2?",
+      "expected": "Calendar integration",
+      "passed": true,
+      "actual": "Calendar integration\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 9, line 69 LifeXP PRD.pdf, page 9, line 69",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 491
+        },
+        {
+          "node": "search",
+          "ms": 151
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1486
+        }
+      ],
+      "latency_ms": 2131
+    },
+    {
+      "id": "lifexp_18",
+      "doc": "lifexp",
+      "query": "What is Prototype A?",
+      "expected": "Natural language parser",
+      "passed": true,
+      "actual": "Prototype A is a \"Natural language parser\" with the function \"Chat \u2192 structured record\".\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 14, line 24 LifeXP PRD.pdf, page 14, line 24",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 491
+        },
+        {
+          "node": "search",
+          "ms": 277
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1522
+        }
+      ],
+      "latency_ms": 2293
+    },
+    {
+      "id": "lifexp_19",
+      "doc": "lifexp",
+      "query": "What must the AI never do?",
+      "expected": "invent experiences",
+      "passed": true,
+      "actual": "The AI must never invent experiences.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 8, line 20; Source 6: LifeXP PRD.pdf, page 5, line 18 LifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 5, line 18",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 654
+        },
+        {
+          "node": "search",
+          "ms": 146
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1655
+        }
+      ],
+      "latency_ms": 2457
+    },
+    {
+      "id": "lifexp_20",
+      "doc": "lifexp",
+      "query": "What does AI do after a chat recording?",
+      "expected": "Extract activities; Suggest skills; Estimate duration; Recommend milestones; Suggest duplicate merges",
+      "passed": true,
+      "actual": "After a chat recording, AI extracts activities, suggests skills, estimates duration, recommends milestones, and suggests duplicate merges. AI should never invent experiences.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 5, line 18 LifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 5, line 18",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 817
+        },
+        {
+          "node": "search",
+          "ms": 150
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 2153
+        }
+      ],
+      "latency_ms": 3123
+    },
+    {
+      "id": "lifexp_21",
+      "doc": "lifexp",
+      "query": "What is the maintenance example about bedsheets?",
+      "expected": "12 days",
+      "passed": true,
+      "actual": "The bedsheets example states: \"Bedsheets last changed 12 days ago. No overdue badge. No 'you failed.' Just bookkeeping for your reminder.\"\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 2, line 6 LifeXP PRD.pdf, page 2, line 6",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 807
+        },
+        {
+          "node": "search",
+          "ms": 149
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1747
+        }
+      ],
+      "latency_ms": 2705
+    },
+    {
+      "id": "lifexp_22",
+      "doc": "lifexp",
+      "query": "What does the chat recording example produce for Japanese?",
+      "expected": "1.5 hours",
+      "passed": true,
+      "actual": "The chat recording example produces \"Japanese +1.5 hours\" for a 90-minute Japanese class.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 3, line 46 LifeXP PRD.pdf, page 3, line 46",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 838
+        },
+        {
+          "node": "search",
+          "ms": 144
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1708
+        }
+      ],
+      "latency_ms": 2692
+    },
+    {
+      "id": "lifexp_23",
+      "doc": "lifexp",
+      "query": "What does Learning Mode recommend to users?",
+      "expected": "books|YouTube playlists|courses|roadmap",
+      "passed": true,
+      "actual": "Learning Mode recommends books, YouTube playlists, courses, communities, and study roadmap.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 8, line 20",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 489
+        },
+        {
+          "node": "search",
+          "ms": 152
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1093
+        }
+      ],
+      "latency_ms": 1737
+    },
+    {
+      "id": "lifexp_24",
+      "doc": "lifexp",
+      "query": "What does the dashboard show instead of tasks completed?",
+      "expected": "3 skills; 18 hours; 5 new experiences",
+      "passed": true,
+      "actual": "The dashboard shows \"You explored 3 skills this week 18 hours learning 5 new experiences\" instead of \"7 tasks completed\" .\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 8, line 20",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 719
+        },
+        {
+          "node": "search",
+          "ms": 2450
+        },
+        {
+          "node": "narrow",
+          "ms": 659
+        },
+        {
+          "node": "answer",
+          "ms": 1312
+        }
+      ],
+      "latency_ms": 5143
+    },
+    {
+      "id": "lifexp_25",
+      "doc": "lifexp",
+      "query": "Which premium feature allows adding records to past days?",
+      "expected": "Backdate",
+      "passed": true,
+      "actual": "Backdate records\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 8, line 20 LifeXP PRD.pdf, page 8, line 20",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 654
+        },
+        {
+          "node": "search",
+          "ms": 158
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1371
+        }
+      ],
+      "latency_ms": 2186
+    },
+    {
+      "id": "lifexp_26",
+      "doc": "lifexp",
+      "query": "Which app philosophy does the long-term possibility compare to?",
+      "expected": "Obsidian",
+      "passed": false,
+      "actual": "Based on the retrieved documents, the long-term possibility compares to the \"Switzerland of Data\" philosophy. This is described in Source 4 as the \"Neutral Moat\" for Enosis, which states: \"What Enosis Does: Extraction, formatting, automated translation, and secure API uploads. What Enosis Does NOT Do: We do not offer diagnostic analytics, client-facing dashboards, or medical...\" .\nFurther analysis needed\npolyu-ifc-enosis.pdf, page 3, line 6",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 540
+        },
+        {
+          "node": "search",
+          "ms": 233
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1809
+        },
+        {
+          "node": "verify",
+          "ms": 1433
+        }
+      ],
+      "latency_ms": 4019
+    },
+    {
+      "id": "lifexp_27",
+      "doc": "lifexp",
+      "query": "What is Prototype E?",
+      "expected": "AI pipeline|LLM extraction",
+      "passed": true,
+      "actual": "Prototype E is the \"AI pipeline\" prototype, which involves: User input \u2192 LLM extraction \u2192 Structured JSON \u2192 Database.\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 14, line 24 LifeXP PRD.pdf, page 14, line 24",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 470
+        },
+        {
+          "node": "search",
+          "ms": 431
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1480
+        }
+      ],
+      "latency_ms": 2383
+    },
+    {
+      "id": "lifexp_28",
+      "doc": "lifexp",
+      "query": "What are the example stats for the Japanese skill?",
+      "expected": "327 hours; 42 experiences",
+      "passed": true,
+      "actual": "Japanese 327 hours, 42 experiences, current milestone JLPT N4\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 3, line 46; Source 2: LifeXP PRD.pdf, page 5, line 18 LifeXP PRD.pdf, page 3, line 46 LifeXP PRD.pdf, page 5, line 18",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 914
+        },
+        {
+          "node": "search",
+          "ms": 152
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1977
+        }
+      ],
+      "latency_ms": 3045
+    },
+    {
+      "id": "lifexp_29",
+      "doc": "lifexp",
+      "query": "How many potential users should be interviewed?",
+      "expected": "5",
+      "passed": true,
+      "actual": "5 potential users\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 14, line 24 LifeXP PRD.pdf, page 14, line 24",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 597
+        },
+        {
+          "node": "search",
+          "ms": 342
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1598
+        }
+      ],
+      "latency_ms": 2540
+    },
+    {
+      "id": "lifexp_30",
+      "doc": "lifexp",
+      "query": "What internal description should be avoided for LifeXP?",
+      "expected": "habit tracker alternative|habit tracker",
+      "passed": true,
+      "actual": "The internal description to avoid for LifeXP is \"habit tracker alternative.\"\nInsufficient data to recommend.\nLifeXP PRD.pdf, page 16, line 9 LifeXP PRD.pdf, page 16, line 9",
+      "trace": [
+        {
+          "node": "classify",
+          "ms": 567
+        },
+        {
+          "node": "search",
+          "ms": 154
+        },
+        {
+          "node": "narrow",
+          "ms": 0
+        },
+        {
+          "node": "answer",
+          "ms": 1351
+        }
+      ],
+      "latency_ms": 2075
+    }
+  ]
+}
