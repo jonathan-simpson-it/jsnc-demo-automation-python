@@ -59,6 +59,7 @@ All routes are under `/api` except `/health`:
 | `/api/regulatory` | HKMA/SFC regulatory feed |
 | `/api/onedrive` | OneDrive browse + import |
 | `/api/graph/mail` | Mailbox list + AI drafts |
+| `/api/assurance` | Compliance assurance pack: audit-chain integrity check, model-version records, explainability report (downloadable Markdown) + manifest |
 
 ## Tests
 

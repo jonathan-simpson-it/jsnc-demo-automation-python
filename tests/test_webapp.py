@@ -170,6 +170,32 @@ def test_summary_page(page):
     print("  PASS  summary page")
 
 
+def test_compliance_page(page):
+    """Test the /compliance positioning page renders its key sections."""
+    page.goto(f"{BASE}/compliance")
+    page.wait_for_load_state("networkidle")
+
+    # Headline and positioning statement
+    assert page.locator("text=Technology partner. Not an intermediary.").first.is_visible(), "Compliance headline missing"
+
+    # What we do / what we don't cards
+    assert page.locator("text=What we do").first.is_visible(), "What-we-do card missing"
+    assert page.locator("text=What we don't do").first.is_visible(), "What-we-don't card missing"
+
+    # Governance features
+    assert page.locator("text=Immutable audit trail").first.is_visible(), "Audit trail feature missing"
+    assert page.locator("text=Model version pinning").first.is_visible(), "Model pinning feature missing"
+
+    # FAQ accordion present
+    assert page.locator("text=Do you need an SFC licence or a licensing exam to do this work?").first.is_visible(), "Compliance FAQ missing"
+
+    # Disclaimer band
+    assert page.locator("text=not legal, regulatory, or compliance").first.is_visible(), "Disclaimer missing"
+
+    page.screenshot(path=f"{SCREENSHOTS}/10_compliance.png", full_page=True)
+    print("  PASS  compliance page")
+
+
 def test_footer(page):
     """Test footer renders on all pages."""
     page.goto(BASE)

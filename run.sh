@@ -38,6 +38,9 @@ resolve_python() {
     local candidates=() c
     [ -n "$VIRTUAL_ENV" ] && candidates+=("$VIRTUAL_ENV/bin/python")
     [ -n "$CONDA_PREFIX" ] && candidates+=("$CONDA_PREFIX/bin/python")
+    # Project-local venv (created by bootstrap_python below or by hand) beats
+    # implicit fallbacks: it is the environment this script maintains itself.
+    candidates+=("$SCRIPT_DIR/venv/bin/python")
     if command -v conda >/dev/null 2>&1; then
         # conda at <base>/bin/conda -> <base>/bin/python
         candidates+=("$(dirname "$(dirname "$(command -v conda)")")/bin/python")
@@ -56,6 +59,44 @@ resolve_python() {
         fi
     done
     return 1
+}
+
+# ─── Bootstrap a project-local venv ─────────────────────────
+# Zero-setup path: when no interpreter on the machine has the project
+# dependencies, build ./venv from the first Python >= 3.11 we can find,
+# then re-resolve. Makes `./run.sh` the only command a fresh machine needs.
+bootstrap_python() {
+    local base c
+    for c in python3 python3.13 python3.12 python3.11; do
+        command -v "$c" >/dev/null 2>&1 || continue
+        "$c" -c "import sys; raise SystemExit(0 if sys.version_info >= (3, 11) else 1)" 2>/dev/null || continue
+        base="$c"
+        break
+    done
+    if [ -z "$base" ]; then
+        echo -e "${RED}ERROR: Python 3.11+ not found. Install it from https://www.python.org or your package manager.${NC}"
+        return 1
+    fi
+    echo -e "${YELLOW}No Python environment with the project dependencies found.${NC}"
+    echo -e "${YELLOW}   Bootstrapping $SCRIPT_DIR/venv with $base ...${NC}"
+    "$base" -m venv venv || return 1
+    ./venv/bin/python -m pip install -q --upgrade pip 2>/dev/null || true
+    ./venv/bin/python -m pip install -q -e ".[dev]" || return 1
+    return 0
+}
+
+# ─── Node preflight (frontend only) ─────────────────────────
+check_node() {
+    if ! command -v node >/dev/null 2>&1 || ! command -v npm >/dev/null 2>&1; then
+        echo -e "${RED}ERROR: Node.js/npm not found. The frontend needs Node 18+.${NC}"
+        echo -e "${RED}       Install from https://nodejs.org, or run ./run.sh --api-only for backend only.${NC}"
+        exit 1
+    fi
+    local major
+    major=$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null || echo 0)
+    if [ "$major" -lt 18 ]; then
+        echo -e "${YELLOW}WARNING: Node $(node --version) found; 18+ is recommended for Next.js 14.${NC}"
+    fi
 }
 
 # ─── Check .env ──────────────────────────────────────────────
@@ -266,11 +307,16 @@ fi
 echo -e "\n${CYAN}Step 1/4: Checking environment${NC}"
 check_env
 if ! resolve_python; then
-    echo -e "${RED}ERROR: No Python interpreter with the project dependencies found.${NC}"
-    echo -e "${RED}       Activate your environment (conda activate / source venv) and run: pip install -e \".[dev]\"${NC}"
-    exit 1
+    if ! bootstrap_python || ! resolve_python; then
+        echo -e "${RED}ERROR: Could not set up a Python environment with the project dependencies.${NC}"
+        echo -e "${RED}       Install Python 3.11+ and run: pip install -e \".[dev]\"${NC}"
+        exit 1
+    fi
 fi
 echo -e "${GREEN}OK: Using Python: $PY${NC}"
+if [ "$API_ONLY" = false ] && [ -n "$FE_DIR" ]; then
+    check_node
+fi
 
 # Step 2: Install (skipped when unchanged since last run)
 if [ "$SKIP_INSTALL" = true ]; then

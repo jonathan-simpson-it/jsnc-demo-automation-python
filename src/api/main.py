@@ -22,6 +22,7 @@ from src.api.routes.review import router as review_router
 from src.api.routes.telemetry import router as telemetry_router
 from src.api.routes.regulatory import router as regulatory_router
 from src.api.routes.graph_mail import router as graph_mail_router
+from src.api.routes.assurance import router as assurance_router
 from src.vector_store.chroma import VectorStore
 
 
@@ -68,6 +69,7 @@ app.include_router(review_router, prefix="/api/review", tags=["review"])
 app.include_router(telemetry_router, prefix="/api/telemetry", tags=["telemetry"])
 app.include_router(regulatory_router, prefix="/api/regulatory", tags=["regulatory"])
 app.include_router(graph_mail_router, prefix="/api/graph/mail", tags=["graph-mail"])
+app.include_router(assurance_router, prefix="/api/assurance", tags=["assurance"])
 
 
 @app.get("/health")
@@ -77,6 +79,20 @@ async def health_check():
         "status": "healthy",
         "version": "0.1.0",
         "server_key_configured": bool(settings.deepseek_api_key),
+    }
+
+
+@app.get("/api/assurance/manifest")
+async def assurance_manifest():
+    """Summarize what the downloadable assurance pack covers."""
+    return {
+        "format": "text/markdown",
+        "download": "/api/assurance/pack",
+        "sections": [
+            "audit-chain integrity verification + regulator export",
+            "model-version records + configuration hash",
+            "explainability report for the latest audited query",
+        ],
     }
 
 
