@@ -32,3 +32,6 @@ htmlcov/
 
 # OS
 .DS_Store
+
+# Eval output artifacts (may contain personal data; regenerate locally)
+scripts/eval_results.json

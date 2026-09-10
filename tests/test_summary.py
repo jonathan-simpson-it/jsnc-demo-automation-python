@@ -71,6 +71,7 @@ def test_empty_summary():
 def test_falls_back_to_chat_history_when_audit_empty():
     """Empty audit + real chat history => report reflects the chats."""
     import sqlite3
+    from datetime import datetime, timedelta, timezone
 
     with tempfile.TemporaryDirectory() as tmpdir:
         audit_path = f"{tmpdir}/audit.db"
@@ -90,15 +91,18 @@ def test_falls_back_to_chat_history_when_audit_empty():
                 created_at TEXT
             )"""
         )
+        now = datetime.now(timezone.utc)
+        recent = (now - timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S")
+        older = (now - timedelta(days=2)).strftime("%Y-%m-%d %H:%M:%S")
         conn.executemany(
             "INSERT INTO conversation_messages "
             "(conversation_id, role, content, agent_type, confidence, created_at) "
             "VALUES (?, ?, ?, ?, ?, ?)",
             [
-                (1, "user", "What is the deal risk?", None, None, "2026-09-02 10:00:00"),
-                (1, "assistant", "Moderate risk.", "due_diligence", 0.9, "2026-09-02 10:00:05"),
-                (1, "user", "Compare the decks", None, None, "2026-09-01 09:00:00"),
-                (1, "assistant", "Differences found.", "cross_doc", 0.8, "2026-09-01 09:00:03"),
+                (1, "user", "What is the deal risk?", None, None, recent),
+                (1, "assistant", "Moderate risk.", "due_diligence", 0.9, recent),
+                (1, "user", "Compare the decks", None, None, older),
+                (1, "assistant", "Differences found.", "cross_doc", 0.8, older),
             ],
         )
         conn.commit()

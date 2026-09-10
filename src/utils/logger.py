@@ -7,6 +7,8 @@ import logging
 import sys
 from datetime import datetime, timezone
 
+from src.utils.request_ctx import get_request_id
+
 
 class PipelineFilter(logging.Filter):
     """Inject pipeline context into log records."""
@@ -20,6 +22,8 @@ class PipelineFilter(logging.Filter):
             record.node = ""
         if not hasattr(record, "latency_ms"):
             record.latency_ms = 0
+        if not hasattr(record, "request_id"):
+            record.request_id = get_request_id() or ""
         return True
 
 
@@ -33,7 +37,7 @@ class JSONFormatter(logging.Formatter):
             "logger": record.name,
             "message": record.getMessage(),
         }
-        for field in ("query", "agent_type", "node", "latency_ms"):
+        for field in ("query", "agent_type", "node", "latency_ms", "request_id"):
             val = getattr(record, field, None)
             if val:
                 log_entry[field] = val

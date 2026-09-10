@@ -7,15 +7,16 @@ integrations.
 
 > The frontend lives in the separate
 > [`jsnc-demo-automation-nextjs`](https://github.com/jonathan-simpson-it/jsnc-demo-automation-nextjs)
-> repository. Deployment topology is documented in the combined repo's
-> `docs/deploy.md`.
+> repository. Architecture, security threat model, migration notes and
+> compliance posture: `docs/` in this repository.
 
 ## Quick start
 
 ```bash
+docker compose up -d postgres     # local PostgreSQL (pgvector) for later SaaS phases
 pip install -e ".[dev]"
-cp .env.example .env          # set DEEPSEEK_API_KEY (optional; BYOK supported)
-./run.sh                      # API only when no sibling ../nextjs/frontend exists
+cp .env.example .env              # set DEEPSEEK_API_KEY (optional; BYOK supported)
+./run.sh                          # API only when no sibling ../nextjs/frontend exists
 # or: uvicorn src.api.main:app --reload --port 8000
 ```
 

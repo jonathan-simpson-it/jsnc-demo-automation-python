@@ -1,0 +1,30 @@
+# Local development services for the JS&C AI platform.
+#
+# Provides the PostgreSQL (pgvector) used by both repositories:
+#   - Prisma migrations / SaaS control plane (jsnc-demo-automation-nextjs)
+#   - FastAPI service data + pgvector retrieval (this repo)
+#
+# Dev-only credentials; never reuse outside local development.
+#
+# Usage:  docker compose up -d postgres
+# URL:    postgresql://payo:payo_dev_password@localhost:5432/payo
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: payo
+      POSTGRES_PASSWORD: payo_dev_password
+      POSTGRES_DB: payo
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U payo -d payo"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:

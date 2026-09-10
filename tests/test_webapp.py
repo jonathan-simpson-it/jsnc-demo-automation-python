@@ -1,7 +1,11 @@
 """Playwright E2E tests for the Next.js frontend."""
 
 import sys
-from playwright.sync_api import sync_playwright
+
+import pytest
+
+pytest.importorskip("playwright")
+from playwright.sync_api import sync_playwright  # noqa: E402
 
 BASE = "http://127.0.0.1:3000"
 SCREENSHOTS = "/tmp/webapp_screenshots"
